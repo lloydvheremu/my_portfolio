@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme {
+  --color-matrix-green: #00ff41;
+  --color-cyan: #00b4d8;
+  --color-bg: #0a0a0a;
+  --color-surface: #111111;
+  --color-border: #1a1a1a;
+  --color-text: #e0e0e0;
+  --color-muted: #666666;
+
+  --font-mono: var(--font-jetbrains), var(--font-fira), "Courier New", monospace;
+}
+
+:root {
+  --matrix-green: #00ff41;
+  --cyan: #00b4d8;
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --border: #1a1a1a;
+  --text: #e0e0e0;
+  --muted: #666666;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-fira), var(--font-jetbrains), "Courier New", monospace;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--matrix-green);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan);
+}
+
+/* Selection */
+::selection {
+  background: var(--matrix-green);
+  color: var(--bg);
+}
+
+/* Scanline overlay for hero */
+.scanlines {
+  position: relative;
+}
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 65, 0.015) 2px,
+    rgba(0, 255, 65, 0.015) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Glitch text animation */
+@keyframes glitch-1 {
+  0%, 100% { clip-path: inset(0 0 95% 0); transform: translate(-2px, 0); }
+  20% { clip-path: inset(30% 0 50% 0); transform: translate(2px, 0); }
+  40% { clip-path: inset(60% 0 20% 0); transform: translate(-1px, 0); }
+  60% { clip-path: inset(80% 0 5% 0); transform: translate(1px, 0); }
+  80% { clip-path: inset(10% 0 75% 0); transform: translate(-2px, 0); }
+}
+@keyframes glitch-2 {
+  0%, 100% { clip-path: inset(50% 0 30% 0); transform: translate(2px, 0); color: var(--cyan); }
+  25% { clip-path: inset(20% 0 60% 0); transform: translate(-2px, 0); }
+  50% { clip-path: inset(70% 0 10% 0); transform: translate(1px, 0); }
+  75% { clip-path: inset(5% 0 85% 0); transform: translate(-1px, 0); }
+}
+@keyframes glitch-main {
+  0%, 90%, 100% { transform: translate(0); }
+  91% { transform: translate(-2px, 1px); }
+  93% { transform: translate(2px, -1px); }
+  95% { transform: translate(-1px, 0); }
+  97% { transform: translate(1px, 1px); }
+}
+
+.glitch {
+  position: relative;
+  animation: glitch-main 4s infinite;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+}
+.glitch::before {
+  animation: glitch-1 4s infinite;
+  color: var(--matrix-green);
+}
+.glitch::after {
+  animation: glitch-2 4s infinite;
+  color: var(--cyan);
+}
+
+/* Glow utilities */
+.glow-green {
+  box-shadow: 0 0 8px var(--matrix-green), 0 0 20px rgba(0, 255, 65, 0.3);
+}
+.glow-cyan {
+  box-shadow: 0 0 8px var(--cyan), 0 0 20px rgba(0, 180, 216, 0.3);
+}
+.text-glow-green {
+  text-shadow: 0 0 8px var(--matrix-green), 0 0 20px rgba(0, 255, 65, 0.5);
+}
+
+/* Ticker / marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 30s linear infinite;
+  display: flex;
+  width: max-content;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Timeline line draw */
+@keyframes line-grow {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+/* Scroll indicator bounce */
+@keyframes bounce-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+.bounce-y {
+  animation: bounce-y 1.5s ease-in-out infinite;
+}
