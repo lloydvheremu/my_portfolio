@@ -20,6 +20,29 @@
     .projects-grid {
       padding: var(--spacing-xl) 0 var(--spacing-2xl);
     }
+
+    .project-card .problem-solved {
+      font-size: 0.8rem;
+      color: var(--accent-cyan);
+      margin-bottom: var(--spacing-sm);
+      font-family: var(--font-display);
+    }
+
+    .project-card .problem-solved::before {
+      content: '// ';
+      color: var(--text-muted);
+    }
+
+    .badge-wip {
+      background: rgba(255, 165, 0, 0.15);
+      color: orange;
+      border: 1px solid orange;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-family: var(--font-display);
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
@@ -31,7 +54,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
           <li><a href="experience.html">Experience</a></li>
           <li><a href="github.html">GitHub</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -52,92 +75,134 @@
     <div class="container">
       <div class="grid grid-2">
 
-        <!-- Project 1: FPL Fixture Difficulty Planner -->
+        <!-- Project 1: ZIMRA Fiscalisation -->
         <div class="project-card fade-in-up">
-          <h3>FPL Fixture Difficulty Planner <span class="badge badge-personal">Personal</span></h3>
+          <h3>ZIMRA Fiscalisation <span class="badge badge-professional">Professional</span></h3>
+          <p class="problem-solved">Fiscalise invoices and POS transactions through ZIMRA-certified devices</p>
           <div class="tags">
-            <span class="tag tag-green">Python</span>
-            <span class="tag tag-green">Django</span>
-            <span class="tag tag-green">REST API</span>
+            <span class="tag tag-cyan">Python</span>
+            <span class="tag tag-cyan">JavaScript</span>
+            <span class="tag tag-cyan">Odoo</span>
+            <span class="tag tag-cyan">PostgreSQL</span>
+            <span class="tag tag-cyan">REST APIs</span>
           </div>
           <p>
-            Web application that pulls live data from the Fantasy Premier League API and visualizes fixture difficulty
-            ratings to help players plan transfers and captain picks. Features real-time data updates and interactive
-            fixture analysis tools.
+            End-to-end fiscalisation integration for the Zimbabwe Revenue Authority (ZIMRA).
+            Covers both invoicing and POS flows with cryptographic fiscal device communication,
+            ensuring full compliance with Zimbabwe's tax regulations. Involved resolving complex
+            precision and concurrency issues in a live production environment.
+          </p>
+          <div class="links">
+            <span class="text-muted">Client work — Private</span>
+          </div>
+        </div>
+
+        <!-- Project 2: ZRA SmartInvoice -->
+        <div class="project-card fade-in-up">
+          <h3>ZRA SmartInvoice Integration <span class="badge badge-professional">Professional</span></h3>
+          <p class="problem-solved">Automate real-time fiscal invoice submission to Zambia Revenue Authority</p>
+          <div class="tags">
+            <span class="tag tag-cyan">Python</span>
+            <span class="tag tag-cyan">Odoo</span>
+            <span class="tag tag-cyan">REST APIs</span>
+            <span class="tag tag-cyan">PostgreSQL</span>
+            <span class="tag tag-cyan">Ubuntu</span>
+          </div>
+          <p>
+            Custom Odoo integration with the Zambia Revenue Authority's SmartInvoice API.
+            Handles real-time invoice and credit note submission, signature verification, and
+            compliance error handling. Also involved server administration and performance
+            optimisation on a DigitalOcean Ubuntu droplet running the ZRA VSDC service.
+          </p>
+          <div class="links">
+            <span class="text-muted">Client work — Private</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Facebook Conversions API -->
+        <div class="project-card fade-in-up">
+          <h3>Facebook Conversions API <span class="badge badge-professional">Professional</span></h3>
+          <p class="problem-solved">Send server-side conversion events from Odoo to Meta's ad platform</p>
+          <div class="tags">
+            <span class="tag tag-cyan">Python</span>
+            <span class="tag tag-cyan">Odoo</span>
+            <span class="tag tag-cyan">Meta API</span>
+            <span class="tag tag-cyan">REST APIs</span>
+            <span class="tag tag-cyan">JavaScript</span>
+          </div>
+          <p>
+            Custom Odoo module integrating with Meta's Conversions API (CAPI) to send
+            server-side conversion events directly to Facebook Ads Manager. Includes
+            configurable Pixel ID and Access Token management, enabling clients to track
+            sales and customer actions for ad performance optimisation without relying
+            solely on browser-side pixels.
+          </p>
+          <div class="links">
+            <span class="text-muted">Client work — Private</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Payroll -->
+        <div class="project-card fade-in-up">
+          <h3>Payroll Module — ZW &amp; ZM <span class="badge badge-professional">Professional</span></h3>
+          <p class="problem-solved">Automate payroll in compliance with Zimbabwean and Zambian tax law</p>
+          <div class="tags">
+            <span class="tag tag-cyan">Python</span>
+            <span class="tag tag-cyan">Odoo</span>
+            <span class="tag tag-cyan">PostgreSQL</span>
+            <span class="tag tag-cyan">XML</span>
+          </div>
+          <p>
+            Custom payroll implementation for both Zimbabwe and Zambia within the Odoo ERP
+            framework. Covers country-specific tax rules, salary structures, and statutory
+            deductions for each jurisdiction. Deployed across multiple client environments
+            with varying payroll configurations and reporting requirements.
+          </p>
+          <div class="links">
+            <span class="text-muted">Client work — Private</span>
+          </div>
+        </div>
+
+        <!-- Project 5: Chess Wrapped -->
+        <div class="project-card fade-in-up">
+          <h3>Chess Wrapped <span class="badge badge-personal">Personal</span> <span class="badge badge-wip">In Progress</span></h3>
+          <p class="problem-solved">Surface meaningful personal chess statistics through a clean API</p>
+          <div class="tags">
+            <span class="tag tag-green">Python</span>
+            <span class="tag tag-green">FastAPI</span>
+            <span class="tag tag-green">PostgreSQL</span>
+            <span class="tag tag-green">Docker</span>
+            <span class="tag tag-green">REST APIs</span>
+          </div>
+          <p>
+            A personal stats API inspired by Spotify Wrapped. Pulls game data from the
+            Lichess and Chess.com public APIs, processes it, and exposes it through a
+            clean FastAPI layer. Highlights include opening tendencies, accuracy trends,
+            win/loss streaks, and peak performance periods. Fully containerised with Docker.
           </p>
           <div class="links">
             <a href="https://github.com/lloydvheremu" target="_blank">GitHub →</a>
           </div>
         </div>
 
-        <!-- Project 2: ZRA SmartInvoice Integration -->
+        <!-- Project 6: FPL Fixture Difficulty Planner -->
         <div class="project-card fade-in-up">
-          <h3>ZRA SmartInvoice Integration <span class="badge badge-professional">Professional</span></h3>
+          <h3>FPL Fixture Difficulty Planner <span class="badge badge-personal">Personal</span> <span class="badge badge-wip">In Progress</span></h3>
+          <p class="problem-solved">Help FPL managers make smarter transfer and captain decisions</p>
           <div class="tags">
-            <span class="tag tag-cyan">Python</span>
-            <span class="tag tag-cyan">Odoo</span>
-            <span class="tag tag-cyan">REST APIs</span>
-            <span class="tag tag-cyan">PostgreSQL</span>
+            <span class="tag tag-green">Python</span>
+            <span class="tag tag-green">Django</span>
+            <span class="tag tag-green">REST API</span>
+            <span class="tag tag-green">PostgreSQL</span>
           </div>
           <p>
-            Custom Odoo module integrating with Zambia Revenue Authority's SmartInvoice API for real-time fiscal
-            compliance. Handles invoice submission, credit notes, and signature verification with cryptographic
-            security features.
+            Web application consuming the Fantasy Premier League public API to pull live
+            fixture, team, and player data. Visualises fixture difficulty ratings across
+            upcoming gameweeks to help managers identify favourable runs for transfers
+            and captain picks.
           </p>
           <div class="links">
-            <span class="text-muted">Client work - Private</span>
-          </div>
-        </div>
-
-        <!-- Project 3: ZIMRA Fiscalisation Module -->
-        <div class="project-card fade-in-up">
-          <h3>ZIMRA Fiscalisation Module <span class="badge badge-professional">Professional</span></h3>
-          <div class="tags">
-            <span class="tag tag-cyan">Python</span>
-            <span class="tag tag-cyan">JavaScript</span>
-            <span class="tag tag-cyan">Odoo OWL</span>
-            <span class="tag tag-cyan">PostgreSQL</span>
-          </div>
-          <p>
-            End-to-end fiscalisation integration for Zimbabwe Revenue Authority. Implements POS and invoice flows
-            with cryptographic fiscal device communication, ensuring full compliance with local tax regulations.
-          </p>
-          <div class="links">
-            <span class="text-muted">Client work - Private</span>
-          </div>
-        </div>
-
-        <!-- Project 4: Online Learning Platform -->
-        <div class="project-card fade-in-up">
-          <h3>Online Learning Platform <span class="badge badge-professional">Professional</span></h3>
-          <div class="tags">
-            <span class="tag tag-cyan">Next.js 14</span>
-            <span class="tag tag-cyan">JavaScript</span>
-            <span class="tag tag-cyan">React</span>
-          </div>
-          <p>
-            Contributed front-end development to an e-learning platform during internship at WireSpeed Systems.
-            Built responsive user interfaces and implemented interactive course modules for online education delivery.
-          </p>
-          <div class="links">
-            <span class="text-muted">Company project - Private</span>
-          </div>
-        </div>
-
-        <!-- Project 5: GRC Platform Configuration -->
-        <div class="project-card fade-in-up">
-          <h3>GRC Platform Configuration <span class="badge badge-professional">Professional</span></h3>
-          <div class="tags">
-            <span class="tag tag-cyan">Corporater BMP</span>
-            <span class="tag tag-cyan">Katalon</span>
-            <span class="tag tag-cyan">JMeter</span>
-          </div>
-          <p>
-            QA testing and module configuration for a Governance, Risk & Compliance software platform serving enterprise
-            clients. Performed automated testing and performance benchmarking to ensure platform reliability.
-          </p>
-          <div class="links">
-            <span class="text-muted">Company project - Private</span>
+            <a href="https://github.com/lloydvheremu" target="_blank">GitHub →</a>
           </div>
         </div>
 

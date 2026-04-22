@@ -22,6 +22,53 @@
       margin: 0 auto;
       padding: var(--spacing-xl) var(--spacing-md) var(--spacing-2xl);
     }
+
+    .timeline-item .role-summary {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: var(--spacing-md);
+      line-height: 1.6;
+    }
+
+    .timeline-item .tech-used {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: var(--spacing-md);
+    }
+
+    .timeline-item .tech-used span {
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border: 1px solid var(--bg-border);
+      border-radius: 3px;
+      color: var(--text-muted);
+      font-family: var(--font-display);
+    }
+
+    .timeline-item.education .tech-used span {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    .industries {
+      margin-top: var(--spacing-md);
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-left: 2px solid var(--accent-cyan);
+      background: rgba(0, 180, 216, 0.05);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .industries p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .industries p span {
+      color: var(--accent-cyan);
+      font-family: var(--font-display);
+    }
   </style>
 </head>
 <body>
@@ -34,7 +81,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="experience.html">Experience</a></li>
+          <li><a href="experience.html" class="active">Experience</a></li>
           <li><a href="github.html">GitHub</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -55,52 +102,91 @@
 
       <!-- M&J Consultants - Software Developer -->
       <div class="timeline-item fade-in-up">
-        <h3>M&J Consultants — Software Developer</h3>
-        <p class="date">Dec 2024 – Mar 2026</p>
+        <h3>M&amp;J Consultants — Software Developer</h3>
+        <p class="date">Dec 2024 – Mar 2026 · Harare, Zimbabwe</p>
+        <p class="role-summary">
+          M&amp;J Consultants is an official Odoo partner operating across Zimbabwe and Zambia.
+          In this role I led development on fiscal compliance integrations and ERP customisations
+          for clients across multiple industries, each with unique operational workflows and
+          regulatory requirements.
+        </p>
         <ul>
-          <li>Developed ZRA SmartInvoice integration module for Odoo ERP system</li>
-          <li>Built custom Odoo modules for fiscal compliance and business automation</li>
-          <li>Implemented REST API integrations with government tax authorities</li>
-          <li>Worked with Python, JavaScript, PostgreSQL, and Docker</li>
-          <li>Collaborated with cross-functional teams to deliver production-ready solutions</li>
+          <li>Developed and maintained the ZRA SmartInvoice fiscal compliance integration for Zambian clients</li>
+          <li>Built the ZIMRA fiscalisation integration covering invoicing and POS flows for Zimbabwean clients</li>
+          <li>Delivered custom ERP solutions tailored to the specific business workflows of each client</li>
+          <li>Administered production Linux servers, managing deployments and resolving live incidents</li>
+          <li>Collaborated with cross-functional teams across client onboarding, testing, and go-live phases</li>
         </ul>
+        <div class="industries">
+          <p>Industries served: <span>Retail · Manufacturing · Finance · Hospitality · Distribution</span> — each requiring unique compliance workflows and ERP configurations.</p>
+        </div>
+        <div class="tech-used">
+          <span>Python</span><span>JavaScript</span><span>Odoo 17–19</span><span>PostgreSQL</span>
+          <span>REST APIs</span><span>Docker</span><span>Linux</span><span>Git</span>
+        </div>
       </div>
 
       <!-- WireSpeed Systems - Graduate Trainee -->
       <div class="timeline-item fade-in-up">
         <h3>WireSpeed Systems — Graduate Trainee</h3>
-        <p class="date">Oct 2024 – Dec 2024</p>
+        <p class="date">Oct 2024 – Dec 2024 · Harare, Zimbabwe</p>
+        <p class="role-summary">
+          Graduate role at WireSpeed Systems spanning front-end development and enterprise
+          software quality assurance.
+        </p>
         <ul>
-          <li>Contributed to front-end development of an online learning platform using Next.js 14</li>
-          <li>Performed QA testing and module configuration for GRC platform (Corporater BMP)</li>
-          <li>Conducted automated testing using Katalon and performance benchmarking with JMeter</li>
-          <li>Gained experience in enterprise software development and quality assurance</li>
+          <li>Contributed to front-end development of an online learning platform using Next.js 14 and React</li>
+          <li>Configured and tested modules for a Governance, Risk &amp; Compliance (GRC) platform for enterprise clients</li>
+          <li>Conducted automated testing and load benchmarking to validate platform reliability</li>
+          <li>Gained practical experience in enterprise software delivery and QA workflows</li>
         </ul>
+        <div class="tech-used">
+          <span>Next.js 14</span><span>React</span><span>JavaScript</span>
+          <span>Katalon</span><span>JMeter</span>
+        </div>
       </div>
 
       <!-- M&J Consultants - Industrial Attachment -->
       <div class="timeline-item fade-in-up">
-        <h3>M&J Consultants — Industrial Attachment</h3>
-        <p class="date">Nov 2023 – Jul 2024</p>
+        <h3>M&amp;J Consultants — Industrial Attachment</h3>
+        <p class="date">Nov 2023 – Jul 2024 · Harare, Zimbabwe</p>
+        <p class="role-summary">
+          Mandatory year-long industrial attachment as part of the BSc Computer Science programme.
+          First commercial software development role — contributed to production Odoo deployments
+          across diverse industries in Zimbabwe and Zambia.
+        </p>
         <ul>
-          <li>Developed custom Odoo modules for various business processes</li>
-          <li>Created QWeb reports and custom views for ERP system</li>
-          <li>Integrated third-party REST APIs with Odoo backend</li>
-          <li>Deployed applications using Docker and configured Nginx reverse proxy</li>
-          <li>Learned professional software development practices and version control with Git</li>
+          <li>Developed the ZIMRA Fiscalisation module, integrating Odoo with Zimbabwe Revenue Authority's fiscal devices</li>
+          <li>Built and customised Odoo ERP modules covering HR, accounting, sales, and operations for multiple clients</li>
+          <li>Integrated third-party REST APIs with Odoo across different client systems and business domains</li>
+          <li>Deployed and configured Odoo instances using Docker, with Nginx as a reverse proxy</li>
+          <li>Managed version control and collaborative development workflows using Git</li>
         </ul>
+        <div class="industries">
+          <p>Industries served: <span>Automotive · Beverages · Professional Services · Healthcare · Logistics</span> — adapting ERP workflows and reports to suit each sector's unique requirements.</p>
+        </div>
+        <div class="tech-used">
+          <span>Python</span><span>JavaScript</span><span>Odoo 15–17</span><span>PostgreSQL</span>
+          <span>QWeb</span><span>OWL</span><span>XML</span><span>REST APIs</span>
+          <span>Docker</span><span>Nginx</span><span>Linux</span><span>Git</span>
+        </div>
       </div>
 
       <!-- NUST - Education -->
       <div class="timeline-item education fade-in-up">
-        <h3>National University of Science and Technology (NUST), Zimbabwe</h3>
-        <p class="date">Graduated 2024</p>
-        <p><strong>BSc Computer Science (Honours) — 2.1</strong></p>
+        <h3>National University of Science and Technology (NUST)</h3>
+        <p class="date">Graduated 2024 · Bulawayo, Zimbabwe</p>
+        <p class="role-summary">
+          <strong>BSc Computer Science (Honours) — Second Class Upper (2.1)</strong>
+        </p>
         <ul>
-          <li>Relevant modules: Artificial Intelligence, Software Engineering, Database Systems</li>
-          <li>Web Development, Mobile Application Development, Computer Networks</li>
-          <li>Data Structures & Algorithms, Operating Systems, Human-Computer Interaction</li>
+          <li>Completed mandatory industrial attachment as a core component of the degree</li>
+          <li>Relevant modules: Artificial Intelligence, Software Engineering, Software Project Management, Database Systems, Web Development, Mobile Application Development, Data Communications &amp; Computer Networking, Human-Computer Interaction, Data Structures &amp; Algorithms, Operating Systems</li>
         </ul>
+        <div class="tech-used">
+          <span>Python</span><span>Java</span><span>C/C++</span><span>SQL</span>
+          <span>Dart / Flutter</span><span>Algorithms</span><span>Networking</span>
+        </div>
       </div>
 
     </div>
