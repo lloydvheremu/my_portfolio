@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Lloyd Vheremu - Software Developer specializing in Python, JavaScript, and full-stack development">
+  <title>About | Lloyd Vheremu</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/effects.css">
+
+  <style>
+    .about-header {
+      text-align: center;
+      padding: var(--spacing-2xl) 0;
+      padding-top: 100px;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto var(--spacing-lg);
+      background: var(--bg-surface);
+      border: 3px solid var(--accent-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-family: var(--font-display);
+      color: var(--accent-green);
+      box-shadow: var(--glow-green);
+    }
+
+    .bio {
+      max-width: 800px;
+      margin: 0 auto var(--spacing-2xl);
+      line-height: 1.8;
+    }
+
+    .bio p {
+      color: var(--text-muted);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .skills-section {
+      padding: var(--spacing-xl) 0;
+    }
+
+    .skill-category {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .skill-category h3 {
+      color: var(--accent-green);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+    }
+
+    .interests {
+      background: var(--bg-surface);
+      padding: var(--spacing-lg) 0;
+      text-align: center;
+      border-top: 1px solid var(--bg-border);
+      border-bottom: 1px solid var(--bg-border);
+    }
+
+    .interests h3 {
+      color: var(--accent-cyan);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .interest-tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="logo">LV</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Header -->
+  <section class="about-header fade-in">
+    <div class="container">
+      <div class="avatar">LV</div>
+      <h1 class="text-accent">About Me</h1>
+    </div>
+  </section>
+
+  <!-- Bio -->
+  <section class="section">
+    <div class="container bio">
+      <p>
+        I'm Lloyd B. Vheremu, a Computer Science graduate from the National University of Science and Technology (NUST) in Zimbabwe.
+        With over 2 years of commercial software development experience, I've had the opportunity to work on diverse projects
+        ranging from ERP systems to web applications, building solutions that solve real-world business problems.
+      </p>
+      <p>
+        My expertise spans full-stack development with a strong foundation in Python and JavaScript. I specialize in building
+        robust backend systems with Django and PostgreSQL, creating modern frontends with Next.js and React, and developing
+        custom ERP solutions using the Odoo framework. I'm passionate about writing clean, maintainable code and delivering
+        high-quality software that makes a difference.
+      </p>
+      <p>
+        I'm currently seeking remote software developer opportunities where I can contribute to meaningful projects, collaborate
+        with talented teams, and continue growing as an engineer. I'm particularly interested in roles that challenge me to solve
+        complex problems and build scalable, user-focused applications.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section skills-section">
+    <div class="container">
+      <h2 class="text-center text-accent">Technical Skills</h2>
+
+      <div class="skill-category">
+        <h3>Backend</h3>
+        <div class="skill-tags">
+          <span class="tag tag-green">Python</span>
+          <span class="tag tag-green">Django</span>
+          <span class="tag tag-green">PostgreSQL</span>
+          <span class="tag tag-green">REST APIs</span>
+          <span class="tag tag-green">Docker</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Frontend</h3>
+        <div class="skill-tags">
+          <span class="tag tag-green">JavaScript</span>
+          <span class="tag tag-green">Next.js</span>
+          <span class="tag tag-green">React</span>
+          <span class="tag tag-green">Tailwind CSS</span>
+          <span class="tag tag-green">Bootstrap</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>ERP / Specialist</h3>
+        <div class="skill-tags">
+          <span class="tag tag-cyan">Odoo (v15–v19)</span>
+          <span class="tag tag-cyan">QWeb</span>
+          <span class="tag tag-cyan">OWL Framework</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Tools & DevOps</h3>
+        <div class="skill-tags">
+          <span class="tag tag-green">Git</span>
+          <span class="tag tag-green">GitHub</span>
+          <span class="tag tag-green">Linux</span>
+          <span class="tag tag-green">SSH</span>
+          <span class="tag tag-green">Nginx</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Other</h3>
+        <div class="skill-tags">
+          <span class="tag tag-green">Flutter</span>
+          <span class="tag tag-green">Dart</span>
+          <span class="tag tag-green">Java</span>
+          <span class="tag tag-green">C/C++</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interests -->
+  <section class="interests">
+    <div class="container">
+      <h3>Interests & Hobbies</h3>
+      <div class="interest-tags">
+        <span class="tag tag-cyan">Chess</span>
+        <span class="tag tag-cyan">Gaming</span>
+        <span class="tag tag-cyan">Reading</span>
+        <span class="tag tag-cyan">Soccer</span>
+        <span class="tag tag-cyan">Sudoku</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/lloydvheremu" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/lloydvheremu" target="_blank">LinkedIn</a>
+        <a href="mailto:lloydblessin@outlook.com">Email</a>
+      </div>
+      <p>&copy; 2026 Lloyd Vheremu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/effects/custom-cursor.js"></script>
+  <script src="js/effects/keypress-ripple.js"></script>
+  <script src="js/components/nav.js"></script>
+</body>
+</html>
