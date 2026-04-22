@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Lloyd Vheremu - Get in touch for software development opportunities">
+  <title>Contact | Lloyd Vheremu</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/effects.css">
+
+  <style>
+    .contact-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: var(--spacing-xl) var(--spacing-md) var(--spacing-2xl);
+    }
+
+    .terminal-form {
+      background: var(--bg-surface);
+      border: 1px solid var(--accent-green);
+      border-radius: 8px;
+      padding: var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
+      font-family: var(--font-display);
+    }
+
+    .terminal-header {
+      color: var(--accent-green);
+      margin-bottom: var(--spacing-md);
+      padding-bottom: var(--spacing-sm);
+      border-bottom: 1px solid var(--bg-border);
+    }
+
+    .form-group {
+      margin-bottom: var(--spacing-md);
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--accent-green);
+      margin-bottom: var(--spacing-xs);
+      font-size: 0.9rem;
+    }
+
+    .form-group label::before {
+      content: '> ';
+      color: var(--accent-cyan);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: var(--bg-primary);
+      border: 1px solid var(--bg-border);
+      border-radius: 4px;
+      padding: 0.75rem;
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-green);
+      box-shadow: var(--glow-green);
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .contact-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .contact-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--bg-border);
+      border-radius: 8px;
+      padding: var(--spacing-lg);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+      border-color: var(--accent-green);
+      box-shadow: var(--glow-green);
+      transform: translateY(-3px);
+    }
+
+    .contact-card h3 {
+      color: var(--accent-green);
+      font-size: 1rem;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .contact-card a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      word-break: break-all;
+    }
+
+    .whoami-section {
+      background: var(--bg-surface);
+      border: 1px solid var(--bg-border);
+      border-radius: 8px;
+      padding: var(--spacing-lg);
+      font-family: var(--font-display);
+      margin-top: var(--spacing-xl);
+    }
+
+    .whoami-section pre {
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    .whoami-section .prompt {
+      color: var(--accent-green);
+    }
+
+    .whoami-section .value {
+      color: var(--accent-cyan);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="logo">LV</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Title -->
+  <div class="page-title fade-in">
+    <h1>Get In Touch</h1>
+    <p>Let's build something great together</p>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="section contact-section">
+
+    <!-- Contact Links -->
+    <div class="contact-links fade-in-up">
+      <div class="contact-card">
+        <h3>Email</h3>
+        <a href="mailto:lloydblessin@outlook.com">lloydblessin@outlook.com</a>
+      </div>
+
+      <div class="contact-card">
+        <h3>LinkedIn</h3>
+        <a href="https://www.linkedin.com/in/lloydvheremu" target="_blank">linkedin.com/in/lloydvheremu</a>
+      </div>
+
+      <div class="contact-card">
+        <h3>GitHub</h3>
+        <a href="https://github.com/lloydvheremu" target="_blank">github.com/lloydvheremu</a>
+      </div>
+
+      <div class="contact-card">
+        <h3>Phone</h3>
+        <a href="tel:+263771951098">+263 77 195 1098</a>
+        <br>
+        <a href="tel:+263782824022">+263 78 282 4022</a>
+      </div>
+    </div>
+
+    <!-- Terminal-style Contact Form -->
+    <div class="terminal-form fade-in-up">
+      <div class="terminal-header">
+        <p>lloyd@portfolio:~$ send-message</p>
+      </div>
+      <form id="contact-form" action="mailto:lloydblessin@outlook.com" method="post" enctype="text/plain">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your name...">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Whoami Section -->
+    <div class="whoami-section fade-in-up">
+      <pre><span class="prompt">lloyd@portfolio:~$</span> whoami
+
+<span class="value">Name:</span>       Lloyd B. Vheremu
+<span class="value">Title:</span>      Software Developer
+<span class="value">Location:</span>   Ruwa, Zimbabwe
+<span class="value">Status:</span>     Open to remote opportunities
+<span class="value">Timezone:</span>   CAT (UTC+2)
+<span class="value">Skills:</span>     Python | JavaScript | Django | Next.js | React
+<span class="value">Interests:</span>  Full-stack development, ERP systems, REST APIs
+
+<span class="prompt">lloyd@portfolio:~$</span> <span class="loading" style="width: 12px; height: 12px;"></span></pre>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/lloydvheremu" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/lloydvheremu" target="_blank">LinkedIn</a>
+        <a href="mailto:lloydblessin@outlook.com">Email</a>
+      </div>
+      <p>&copy; 2026 Lloyd Vheremu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/effects/custom-cursor.js"></script>
+  <script src="js/effects/keypress-ripple.js"></script>
+  <script src="js/components/nav.js"></script>
+
+  <script>
+    // Simple form validation
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        e.preventDefault();
+        alert('Please fill in all fields before sending.');
+      }
+    });
+  </script>
+</body>
+</html>

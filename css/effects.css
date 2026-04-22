@@ -1,0 +1,311 @@
+/* Effects CSS - Visual Effects & Animations */
+
+/* Custom Cursor */
+#custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+  transition: transform 0.15s ease;
+  box-shadow: var(--glow-green);
+}
+
+#custom-cursor::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--accent-green);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+#custom-cursor.hover {
+  transform: scale(1.5);
+  background: var(--accent-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+#custom-cursor.hover::before {
+  border-color: var(--accent-cyan);
+}
+
+/* Matrix Rain Canvas */
+#matrix-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+/* Glitch Text Effect */
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.glitch::before {
+  animation: glitch-1 2s infinite;
+  color: var(--accent-cyan);
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 3s infinite;
+  color: var(--accent-green);
+  z-index: -2;
+}
+
+@keyframes glitch-1 {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(-2px, 2px);
+  }
+}
+
+/* Scanline Overlay */
+.scanline-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.scanline-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 255, 65, 0.1);
+  animation: scanline 8s linear infinite;
+}
+
+.scanline-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+/* Keypress Ripple */
+.keypress-ripple {
+  position: fixed;
+  border-radius: 50%;
+  border: 2px solid var(--accent-green);
+  pointer-events: none;
+  z-index: 9998;
+  animation: ripple-expand 0.8s ease-out forwards;
+}
+
+@keyframes ripple-expand {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0.8;
+  }
+  to {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+/* Hero Section Specific */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: var(--spacing-lg);
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--accent-green);
+  text-shadow: var(--glow-green);
+}
+
+.hero .subtitle {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+  font-family: var(--font-display);
+}
+
+.hero .tagline {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-xl);
+  font-style: italic;
+}
+
+.hero .cta-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: var(--spacing-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator::before {
+  content: '▼';
+  color: var(--accent-green);
+  font-size: 1.5rem;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+/* About Preview Section */
+.about-preview {
+  background: var(--bg-surface);
+  padding: var(--spacing-xl) 0;
+}
+
+.about-preview p {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-lg) auto;
+  text-align: center;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* Hover Glow on Interactive Elements */
+.glow-on-hover {
+  transition: all 0.3s ease;
+}
+
+.glow-on-hover:hover {
+  box-shadow: var(--glow-green);
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  margin: var(--spacing-2xl) 0;
+  padding-top: var(--spacing-xl);
+}
+
+.page-title h1 {
+  font-size: 3rem;
+  color: var(--accent-green);
+  text-shadow: var(--glow-green);
+  margin-bottom: var(--spacing-sm);
+}
+
+.page-title p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero .tagline {
+    font-size: 1rem;
+  }
+
+  .hero .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-title h1 {
+    font-size: 2rem;
+  }
+}
