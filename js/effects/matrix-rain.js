@@ -77,4 +77,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if (matrixCanvas) {
     new MatrixRain('matrix-canvas');
   }
+
+  // Initialize for background matrix on other pages
+  const matrixBg = document.querySelector('.matrix-bg');
+  if (matrixBg) {
+    const canvas = document.createElement('canvas');
+    canvas.id = 'matrix-bg-canvas';
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    matrixBg.appendChild(canvas);
+    new MatrixRain('matrix-bg-canvas');
+  }
 });
