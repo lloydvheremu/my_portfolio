@@ -3,6 +3,27 @@
 /* Custom Cursor - Disabled */
 /* Using default browser cursor for better accessibility */
 
+/* Cursor Trail Effect */
+.cursor-trail-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+  box-shadow: 0 0 8px var(--accent-green);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Light mode - adjust trail color */
+[data-theme="light"] .cursor-trail-dot {
+  background: var(--accent-cyan);
+  box-shadow: 0 0 6px var(--accent-cyan);
+  opacity: 0.6;
+}
+
 /* Matrix Rain Canvas */
 #matrix-canvas {
   position: absolute;
