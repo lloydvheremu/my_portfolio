@@ -1,41 +1,7 @@
 /* Effects CSS - Visual Effects & Animations */
 
-/* Custom Cursor */
-#custom-cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--accent-green);
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: screen;
-  transition: transform 0.15s ease;
-  box-shadow: var(--glow-green);
-}
-
-#custom-cursor::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  border: 2px solid var(--accent-green);
-  border-radius: 50%;
-  opacity: 0.3;
-}
-
-#custom-cursor.hover {
-  transform: scale(1.5);
-  background: var(--accent-cyan);
-  box-shadow: var(--glow-cyan);
-}
-
-#custom-cursor.hover::before {
-  border-color: var(--accent-cyan);
-}
+/* Custom Cursor - Disabled */
+/* Using default browser cursor for better accessibility */
 
 /* Matrix Rain Canvas */
 #matrix-canvas {
@@ -178,7 +144,7 @@
 /* Hero Section Specific */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,7 +163,6 @@
   font-size: 4rem;
   margin-bottom: var(--spacing-sm);
   color: var(--accent-green);
-  text-shadow: var(--glow-green);
 }
 
 .hero .subtitle {
@@ -277,7 +242,6 @@
 .page-title h1 {
   font-size: 3rem;
   color: var(--accent-green);
-  text-shadow: var(--glow-green);
   margin-bottom: var(--spacing-sm);
 }
 
