@@ -4,7 +4,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://lloydvheremu.github.io/my_portfolio/sitemap.xml
 
 # Crawl-delay (optional, can help with rate limiting)
 # Crawl-delay: 10

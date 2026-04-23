@@ -2,19 +2,19 @@
   "name": "Lloyd Vheremu — Portfolio",
   "short_name": "LBV Portfolio",
   "description": "Portfolio of Lloyd Blessing Vheremu, Software Developer specializing in Python, JavaScript, and full-stack development",
-  "start_url": "/",
+  "start_url": "/my_portfolio/",
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#00ff41",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/favicon.png",
+      "src": "/my_portfolio/favicon.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/apple-touch-icon.png",
+      "src": "/my_portfolio/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png",
       "purpose": "any maskable"
