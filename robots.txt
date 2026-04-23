@@ -1,0 +1,10 @@
+# robots.txt for Lloyd Vheremu Portfolio
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Crawl-delay (optional, can help with rate limiting)
+# Crawl-delay: 10

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OG Image Generator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+    }
+
+    .og-image {
+      width: 1200px;
+      height: 630px;
+      background: #0a0a0a;
+      position: relative;
+      overflow: hidden;
+      border: 3px solid #00ff41;
+      box-shadow: inset 0 0 100px rgba(0, 255, 65, 0.2);
+    }
+
+    .matrix-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      font-family: monospace;
+      font-size: 14px;
+      color: #00ff41;
+      line-height: 1.5;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-align: center;
+      padding: 60px;
+    }
+
+    .name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 80px;
+      font-weight: 700;
+      color: #00ff41;
+      text-shadow: 0 0 20px #00ff41, 0 0 40px #00ff41;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .name::before {
+      content: attr(data-text);
+      position: absolute;
+      left: -2px;
+      text-shadow: -2px 0 #00b4d8;
+      top: 0;
+      color: #00ff41;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+      animation: glitch-anim 2s infinite linear alternate-reverse;
+    }
+
+    @keyframes glitch-anim {
+      0% { clip: rect(10px, 9999px, 80px, 0); }
+      20% { clip: rect(50px, 9999px, 20px, 0); }
+      40% { clip: rect(70px, 9999px, 60px, 0); }
+      60% { clip: rect(20px, 9999px, 90px, 0); }
+      80% { clip: rect(60px, 9999px, 40px, 0); }
+      100% { clip: rect(30px, 9999px, 70px, 0); }
+    }
+
+    .subtitle {
+      font-family: 'Fira Code', monospace;
+      font-size: 36px;
+      color: #e0e0e0;
+      margin-bottom: 30px;
+    }
+
+    .tagline {
+      font-family: 'Fira Code', monospace;
+      font-size: 24px;
+      color: #666666;
+      font-weight: 300;
+    }
+
+    .scanline {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+      pointer-events: none;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+  <div class="og-image" id="ogImage">
+    <div class="matrix-bg">
+      101010 <LBV/> 110011 PYTHON JAVASCRIPT 010101 DJANGO<br>
+      010101 FULL-STACK 111000 NEXTJS REACT 101010<br>
+      110011 SOFTWARE DEVELOPER 010101 ODOO 111000<br>
+      101010 <LBV/> 110011 PYTHON JAVASCRIPT 010101 DJANGO<br>
+      010101 FULL-STACK 111000 NEXTJS REACT 101010<br>
+      110011 SOFTWARE DEVELOPER 010101 ODOO 111000<br>
+      101010 <LBV/> 110011 PYTHON JAVASCRIPT 010101 DJANGO<br>
+      010101 FULL-STACK 111000 NEXTJS REACT 101010<br>
+      110011 SOFTWARE DEVELOPER 010101 ODOO 111000<br>
+      101010 <LBV/> 110011 PYTHON JAVASCRIPT 010101 DJANGO<br>
+    </div>
+    <div class="scanline"></div>
+    <div class="content">
+      <div class="name" data-text="Lloyd Vheremu">Lloyd Vheremu</div>
+      <div class="subtitle">Software Developer</div>
+      <div class="tagline">Python · JavaScript · Django · Next.js · Odoo</div>
+    </div>
+  </div>
+
+  <script>
+    // Instructions for generating the image:
+    // 1. Open this file in a browser
+    // 2. Take a screenshot of the og-image div (1200x630px)
+    // 3. OR use a browser automation tool to capture it
+    // 4. Save as og-image.png
+
+    console.log('OG Image ready! Take a screenshot (1200x630px) and save as og-image.png');
+    console.log('Recommended tools:');
+    console.log('- Browser DevTools screenshot feature');
+    console.log('- Puppeteer/Playwright for automated capture');
+    console.log('- Online HTML to Image converters');
+  </script>
+</body>
+</html>
