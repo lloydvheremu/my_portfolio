@@ -3,119 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Activity &bull; Lloyd Vheremu</title>
-  <meta name="description" content="Explore live GitHub repositories and public activity for Lloyd Vheremu (@lloydvheremu).">
-  <meta property="og:title" content="GitHub Activity | Lloyd Vheremu">
-  <meta property="og:description" content="Public repositories, open-source experiments, and code commits by Lloyd Vheremu.">
-  <link rel="stylesheet" href="/css/global.css">
-  <link rel="stylesheet" href="/css/components.css">
-  <link rel="stylesheet" href="/css/effects.css">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore Lloyd Vheremu's GitHub profile: public repositories, contribution graph, and recent coding activity. View live projects in Python, JavaScript, Django, and more.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Lloyd Blessing Vheremu">
+  <meta name="keywords" content="GitHub, Lloyd Vheremu GitHub, Open Source, Repositories, Code Portfolio, Python GitHub, JavaScript GitHub">
+  <title>GitHub Activity | Lloyd Vheremu</title>
+  <link rel="canonical" href="https://lloydvheremu.github.io/my_portfolio/github.html">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/my_portfolio/favicon.ico" sizes="any">
+  <link rel="icon" href="/my_portfolio/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/my_portfolio/favicon.png" type="image/png" sizes="32x32">
+  <link rel="shortcut icon" href="/my_portfolio/favicon.ico">
+  <link rel="apple-touch-icon" href="/my_portfolio/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/my_portfolio/manifest.json">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lloydvheremu.github.io/my_portfolio/github.html">
+  <meta property="og:title" content="GitHub Activity | Lloyd Vheremu - Software Developer">
+  <meta property="og:description" content="View Lloyd Vheremu's live GitHub activity, public repositories, and contribution graph. Active developer in Python, JavaScript, and full-stack projects.">
+  <meta property="og:image" content="https://lloydvheremu.github.io/my_portfolio/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Lloyd Vheremu">
+
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://lloydvheremu.github.io/my_portfolio/github.html">
+  <meta name="twitter:title" content="GitHub Activity | Lloyd Vheremu - Software Developer">
+  <meta name="twitter:description" content="View Lloyd Vheremu's live GitHub activity, public repositories, and contribution graph. Active developer in Python, JavaScript, and full-stack projects.">
+  <meta name="twitter:image" content="https://lloydvheremu.github.io/my_portfolio/assets/og-image.png">
+
+  <!-- Mobile / PWA -->
+  <meta name="theme-color" content="#00ff41" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#00b300" media="(prefers-color-scheme: light)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Performance / DNS Prefetch -->
+  <link rel="dns-prefetch" href="//api.github.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+
+  <style>
+    .github-section {
+      padding: var(--spacing-xl) 0;
+    }
+
+    .contribution-graph {
+      text-align: center;
+      margin-bottom: var(--spacing-2xl);
+      padding: var(--spacing-lg);
+      background: var(--bg-surface);
+      border: 1px solid var(--bg-border);
+      border-radius: 8px;
+    }
+
+    .contribution-graph img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .activity-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--bg-border);
+      border-radius: 8px;
+      padding: var(--spacing-md);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .activity-item:hover {
+      border-color: var(--accent-green);
+    }
+
+    .section-header {
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .section-header h2 {
+      color: var(--accent-green);
+      margin-bottom: var(--spacing-xs);
+    }
+  </style>
+  <link rel="stylesheet" crossorigin href="/assets/effects-i43uAgEz.css">
 </head>
-<body>
-
+<body id="github-page">
   <!-- Navigation -->
-  <nav class="site-nav" id="main-navigation" aria-label="Main Navigation">
-    <div class="container nav-container">
-      <a href="index.html" class="brand-link" id="brand-link">
-        <span class="brand-name">Lloyd Vheremu</span>
-        <span class="brand-tag">Engineer &bull; Ruwa, Zimbabwe</span>
-      </a>
-
-      <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
-
-      <ul class="nav-menu" id="nav-menu-list">
-        <li class="nav-item"><a href="index.html">Home</a></li>
-        <li class="nav-item"><a href="about.html">About</a></li>
-        <li class="nav-item"><a href="experience.html">Experience</a></li>
-        <li class="nav-item"><a href="projects.html">Projects</a></li>
-        <li class="nav-item"><a href="github.html" class="active">GitHub</a></li>
-        <li class="nav-item"><a href="contact.html">Contact</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-cta">Get in Touch</a></li>
-      </ul>
+  <nav>
+    <div class="container">
+      <div class="logo">LBV</div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="github.html">GitHub</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle">☀ Light</button>
+      </div>
     </div>
   </nav>
 
-  <main id="main-content">
-    <section class="section">
-      <div class="container">
-        
-        <div class="section-header" style="max-width: 800px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-            <div>
-              <span class="section-label">Open Source</span>
-              <h1>GitHub &amp; Code Activity</h1>
-            </div>
-            <a href="https://github.com/lloydvheremu" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              <span>Follow @lloydvheremu</span>
-            </a>
-          </div>
-          <p class="section-description">
-            Live public repositories and recent activity fetched in real-time from the GitHub API. Much of my commercial work lives in private partner and client repositories, but here is my public workbench.
-          </p>
-        </div>
+  <!-- Page Title -->
+  <div class="page-title fade-in">
+    <h1>GitHub Activity</h1>
+    <p>Public repositories and recent contributions</p>
+  </div>
 
-        <!-- Repositories Grid -->
-        <div style="margin-bottom: var(--space-2xl);">
-          <div>
-            <h2 class="desk-section-heading">Public Repositories</h2>
-          </div>
-          <div class="cards-grid cards-grid-2" id="repos-grid">
-            <div class="chess-loading" style="grid-column: 1 / -1;">
-              Fetching repositories from GitHub...
-            </div>
-          </div>
-        </div>
-
-        <!-- Recent Activity Feed -->
-        <div>
-          <div>
-            <h2 class="desk-section-heading">Recent Public Activity</h2>
-          </div>
-          <div id="events-list" style="max-width: 800px;">
-            <div class="chess-loading">
-              Fetching activity log...
-            </div>
-          </div>
-        </div>
-
+  <!-- Contribution Graph -->
+  <section class="section">
+    <div class="container">
+      <div class="contribution-graph fade-in">
+        <h2 class="text-accent">Contribution Graph</h2>
+        <img src="https://ghchart.rshah.org/00ff41/lloydvheremu" alt="Lloyd's GitHub Contribution Graph">
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- Public Repositories -->
+  <section class="section github-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Public Repositories</h2>
+        <p class="text-muted">Recently updated projects</p>
+      </div>
+      <div id="repos-grid" class="grid grid-2">
+        <div class="loading"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Activity -->
+  <section class="section github-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Recent Activity</h2>
+        <p class="text-muted">Latest push events</p>
+      </div>
+      <div id="activity-feed">
+        <div class="loading"></div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container" style="position: relative;">
-      <!-- Asset 5: Vintage MP3 Player resting on wood desk in footer -->
-      <img src="/assets/vintage-mp3-player.png" alt="" class="desk-object-photo desk-mp3-photo" aria-hidden="true" referrerPolicy="no-referrer" />
-      <div class="footer-content">
-        <div>
-          <strong style="color: var(--text-primary); font-family: var(--font-serif); font-size: 1.1rem;">Lloyd Vheremu</strong>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Full-Stack Engineer &bull; Ruwa, Zimbabwe</p>
-        </div>
-
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="experience.html">Experience</a>
-          <a href="projects.html">Projects</a>
-          <a href="github.html">GitHub</a>
-          <a href="contact.html">Contact</a>
-        </div>
-
-        <p style="font-size: 0.8rem; color: var(--text-faint);">
-          &copy; <span id="current-year">2026</span> Lloyd Vheremu.
-        </p>
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/lloydvheremu" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/lloydvheremu" target="_blank">LinkedIn</a>
+        <a href="mailto:lloydblessin@outlook.com">Email</a>
       </div>
+      <p>&copy; 2026 Lloyd Vheremu. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="/js/components/nav.js"></script>
-  <script src="/js/github-api.js"></script>
-  <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
+  <!-- Scripts -->
+  <script src="js/github-api.js"></script>
+  <script src="js/effects/matrix-rain.js"></script>
+  <script src="js/effects/keypress-ripple.js"></script>
+  <script src="js/components/nav.js"></script>
+  <script src="js/effects/cursor-trail.js"></script>
+  <script src="js/components/theme-toggle.js"></script>
 </body>
 </html>
