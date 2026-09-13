@@ -3,314 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Explore Lloyd Vheremu's software development projects: ERP integrations, REST APIs, web applications using Python, Django, Next.js, and Odoo. Professional and personal work showcased.">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Lloyd Blessing Vheremu">
-  <meta name="keywords" content="Projects, Portfolio, Django Projects, Next.js Projects, Odoo Development, ERP Integration, REST API, Python Projects">
-  <title>Projects | Lloyd Vheremu</title>
-  <link rel="canonical" href="https://lloydvheremu.github.io/my_portfolio/projects.html">
-
-  <!-- Favicons -->
-  <link rel="icon" href="/my_portfolio/favicon.ico" sizes="any">
-  <link rel="icon" href="/my_portfolio/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/my_portfolio/favicon.png" type="image/png" sizes="32x32">
-  <link rel="shortcut icon" href="/my_portfolio/favicon.ico">
-  <link rel="apple-touch-icon" href="/my_portfolio/apple-touch-icon.png" sizes="180x180">
-  <link rel="manifest" href="/my_portfolio/manifest.json">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://lloydvheremu.github.io/my_portfolio/projects.html">
-  <meta property="og:title" content="Projects | Lloyd Vheremu - Software Developer">
-  <meta property="og:description" content="Browse professional and personal software projects including ERP integrations, REST APIs, and full-stack web applications.">
-  <meta property="og:image" content="https://lloydvheremu.github.io/my_portfolio/assets/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Lloyd Vheremu">
-
-  <!-- Twitter/X Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://lloydvheremu.github.io/my_portfolio/projects.html">
-  <meta name="twitter:title" content="Projects | Lloyd Vheremu - Software Developer">
-  <meta name="twitter:description" content="Browse professional and personal software projects including ERP integrations, REST APIs, and full-stack web applications.">
-  <meta name="twitter:image" content="https://lloydvheremu.github.io/my_portfolio/assets/og-image.png">
-
-  <!-- Mobile / PWA -->
-  <meta name="theme-color" content="#00ff41" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#00b300" media="(prefers-color-scheme: light)">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <!-- Performance / DNS Prefetch -->
-  <link rel="dns-prefetch" href="//api.github.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- Stylesheets -->
-
-  <style>
-    .projects-grid {
-      padding: var(--spacing-xl) 0 var(--spacing-2xl);
-    }
-
-    .project-card .problem-solved {
-      font-size: 0.8rem;
-      color: var(--accent-cyan);
-      margin-bottom: var(--spacing-sm);
-      font-family: var(--font-display);
-    }
-
-    .project-card .problem-solved::before {
-      content: '// ';
-      color: var(--text-muted);
-    }
-
-    .badge-wip {
-      background: rgba(255, 165, 0, 0.15);
-      color: orange;
-      border: 1px solid orange;
-      font-size: 0.7rem;
-      padding: 2px 8px;
-      border-radius: 3px;
-      font-family: var(--font-display);
-      vertical-align: middle;
-    }
-  </style>
-  <link rel="stylesheet" crossorigin href="/assets/effects-i43uAgEz.css">
+  <title>Projects &bull; Lloyd Vheremu | Full-Stack Engineer</title>
+  <meta name="description" content="Portfolio of software projects by Lloyd Vheremu — enterprise Odoo ERP modules, fiscal tax engines (ZIMRA &amp; ZRA), Chess Wrapped, and AI tools.">
+  <meta property="og:title" content="Projects | Lloyd Vheremu">
+  <meta property="og:description" content="Explore production enterprise ERP modules, fiscal integrations, and personal open-source projects built by Lloyd Vheremu.">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/effects.css">
 </head>
 <body>
-  <!-- Matrix Background -->
-  <div class="matrix-bg"></div>
 
   <!-- Navigation -->
-  <nav>
-    <div class="container">
-      <div class="logo">LBV</div>
-      <div class="nav-right">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html" class="active">Projects</a></li>
-          <li><a href="experience.html">Experience</a></li>
-          <li><a href="github.html">GitHub</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <button id="theme-toggle" class="theme-toggle">☀ Light</button>
-      </div>
+  <nav class="site-nav" id="main-navigation" aria-label="Main Navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" id="brand-link">
+        <span class="brand-name">Lloyd Vheremu</span>
+        <span class="brand-tag">Engineer &bull; Ruwa, Zimbabwe</span>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu-list">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+        <li class="nav-item"><a href="experience.html">Experience</a></li>
+        <li class="nav-item"><a href="projects.html" class="active">Projects</a></li>
+        <li class="nav-item"><a href="github.html">GitHub</a></li>
+        <li class="nav-item"><a href="contact.html">Contact</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- Page Title -->
-  <div class="page-title fade-in">
-    <h1>Projects</h1>
-    <p>A selection of personal and professional work</p>
-  </div>
-
-  <!-- Projects Grid -->
-  <section class="section projects-grid">
-    <div class="container">
-      <div class="grid grid-2">
-
-        <!-- Project 1: ZIMRA Fiscalisation -->
-        <div class="project-card fade-in-up">
-          <h3>ZIMRA Fiscalisation <span class="badge badge-professional">Professional</span></h3>
-          <p class="problem-solved">Fiscalise invoices and POS transactions through ZIMRA-certified devices</p>
-          <div class="tags">
-            <span class="tag tag-cyan">Python</span>
-            <span class="tag tag-cyan">JavaScript</span>
-            <span class="tag tag-cyan">Odoo</span>
-            <span class="tag tag-cyan">PostgreSQL</span>
-            <span class="tag tag-cyan">REST APIs</span>
-          </div>
-          <p>
-            End-to-end fiscalisation integration for the Zimbabwe Revenue Authority (ZIMRA).
-            Covers both invoicing and POS flows with cryptographic fiscal device communication,
-            ensuring full compliance with Zimbabwe's tax regulations. Involved resolving complex
-            precision and concurrency issues in a live production environment.
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        
+        <div class="section-header" style="max-width: 800px;">
+          <span class="section-label">Selected Works</span>
+          <h1>Projects &amp; Open-Source Builds</h1>
+          <p class="section-description">
+            Curiosity-driven software experiments, chess data analytics, and sports modeling algorithms. For commercial enterprise ERP and fiscal gateway architecture, visit the <a href="experience.html" style="color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">Experience</a> archive.
           </p>
-          <div class="links">
-            <span class="text-muted">Client work — Private</span>
-          </div>
         </div>
 
-        <!-- Project 2: ZRA SmartInvoice -->
-        <div class="project-card fade-in-up">
-          <h3>ZRA SmartInvoice Integration <span class="badge badge-professional">Professional</span></h3>
-          <p class="problem-solved">Automate real-time fiscal invoice submission to Zambia Revenue Authority</p>
-          <div class="tags">
-            <span class="tag tag-cyan">Python</span>
-            <span class="tag tag-cyan">Odoo</span>
-            <span class="tag tag-cyan">REST APIs</span>
-            <span class="tag tag-cyan">PostgreSQL</span>
-            <span class="tag tag-cyan">Ubuntu</span>
+        <!-- Section: Personal Projects & Experiments -->
+        <div>
+          <div style="margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+            <h2 class="desk-section-heading" style="margin-bottom: 0;">Personal &amp; Open-Source Projects</h2>
+            <span class="desk-section-heading" style="margin-bottom: 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Curiosity &amp; Data Analysis</span>
           </div>
-          <p>
-            Custom Odoo integration with the Zambia Revenue Authority's SmartInvoice API.
-            Handles real-time invoice and credit note submission, signature verification, and
-            compliance error handling. Also involved server administration and performance
-            optimisation on a DigitalOcean Ubuntu droplet running the ZRA VSDC service.
-          </p>
-          <div class="links">
-            <span class="text-muted">Client work — Private</span>
-          </div>
-        </div>
 
-        <!-- Project 3: Facebook Conversions API -->
-        <div class="project-card fade-in-up">
-          <h3>Facebook Conversions API <span class="badge badge-professional">Professional</span></h3>
-          <p class="problem-solved">Send server-side conversion events from Odoo to Meta's ad platform</p>
-          <div class="tags">
-            <span class="tag tag-cyan">Python</span>
-            <span class="tag tag-cyan">Odoo</span>
-            <span class="tag tag-cyan">Meta API</span>
-            <span class="tag tag-cyan">REST APIs</span>
-            <span class="tag tag-cyan">JavaScript</span>
-          </div>
-          <p>
-            Custom Odoo module integrating with Meta's Conversions API (CAPI) to send
-            server-side conversion events directly to Facebook Ads Manager. Includes
-            configurable Pixel ID and Access Token management, enabling clients to track
-            sales and customer actions for ad performance optimisation without relying
-            solely on browser-side pixels.
-          </p>
-          <div class="links">
-            <span class="text-muted">Client work — Private</span>
-          </div>
-        </div>
+          <div class="cards-grid cards-grid-2">
+            
+            <!-- Project 5: Chess Wrapped -->
+            <div class="card">
+              <div class="card-header">
+                <span class="card-category">Data Analytics</span>
+                <span class="tag">Open Source</span>
+              </div>
+              <h3 class="card-title">Chess Wrapped (Lichess API)</h3>
+              <p class="card-desc">
+                An interactive retrospective tool for chess players built on top of the public Lichess API. Ingests player PGN game histories to evaluate opening efficiency (win rates across Sicilian, Caro-Kann, Queen's Gambit, etc.), tactical time scrambles, and blunder hotspots across different time controls.
+              </p>
+              <div class="tags-list">
+                <span class="tag tag-accent">Python</span>
+                <span class="tag">Lichess API</span>
+                <span class="tag">PGN Parsing</span>
+                <span class="tag">Data Visualization</span>
+              </div>
+            </div>
 
-        <!-- Project 4: Payroll -->
-        <div class="project-card fade-in-up">
-          <h3>Payroll Module — ZW &amp; ZM <span class="badge badge-professional">Professional</span></h3>
-          <p class="problem-solved">Automate payroll in compliance with Zimbabwean and Zambian tax law</p>
-          <div class="tags">
-            <span class="tag tag-cyan">Python</span>
-            <span class="tag tag-cyan">Odoo</span>
-            <span class="tag tag-cyan">PostgreSQL</span>
-            <span class="tag tag-cyan">XML</span>
-          </div>
-          <p>
-            Custom payroll implementation for both Zimbabwe and Zambia within the Odoo ERP
-            framework. Covers country-specific tax rules, salary structures, and statutory
-            deductions for each jurisdiction. Deployed across multiple client environments
-            with varying payroll configurations and reporting requirements.
-          </p>
-          <div class="links">
-            <span class="text-muted">Client work — Private</span>
-          </div>
-        </div>
+            <!-- Project 6: AI FPL Assistant -->
+            <div class="card">
+              <div class="card-header">
+                <span class="card-category">Machine Learning &amp; Sports Analytics</span>
+                <span class="tag">Active Project</span>
+              </div>
+              <h3 class="card-title">AI Fantasy Premier League Assistant</h3>
+              <p class="card-desc">
+                An analytical decision-support system designed to solve the weekly Fantasy Premier League transfer dilemma. Integrates underlying expected metrics (xG, xA, big chances created) with fixture difficulty ratings and squad value constraints to compute optimal rotation paths over a 5-gameweek horizon.
+              </p>
+              <div class="tags-list">
+                <span class="tag tag-accent">Python</span>
+                <span class="tag">FPL API</span>
+                <span class="tag">Predictive Modeling</span>
+                <span class="tag">Optimization</span>
+              </div>
+            </div>
 
-        <!-- Project 5: AB Systems -->
-        <div class="project-card fade-in-up">
-          <h3>AB Systems <span class="badge badge-professional">Professional</span></h3>
-          <p class="problem-solved">Establish a high-performance digital presence for an industrial systems provider</p>
-          <div class="tags">
-            <span class="tag tag-cyan">Vite</span>
-            <span class="tag tag-cyan">React</span>
-            <span class="tag tag-cyan">JavaScript</span>
-            <span class="tag tag-cyan">CSS</span>
-            <span class="tag tag-cyan">Responsive Design</span>
-          </div>
-          <p>
-            Developed a sleek, modern landing page for AB Systems. Focused on performance, 
-            SEO, and clear service presentation to enhance their digital brand. Built with a 
-            mobile-first approach to ensure a seamless experience across all devices.
-          </p>
-          <div class="links">
-            <a href="https://ab-systems-eight.vercel.app" target="_blank">Live Site →</a>
-          </div>
-        </div>
-
-        <!-- Project 6: Palmgate Gardeners -->
-        <div class="project-card fade-in-up">
-          <h3>Palmgate Gardeners <span class="badge badge-professional">Professional</span></h3>
-          <p class="problem-solved">Create an elegant, nature-inspired landing page to showcase landscaping services</p>
-          <div class="tags">
-            <span class="tag tag-cyan">Vite</span>
-            <span class="tag tag-cyan">React</span>
-            <span class="tag tag-cyan">JavaScript</span>
-            <span class="tag tag-cyan">CSS</span>
-            <span class="tag tag-cyan">UI/UX</span>
-          </div>
-          <p>
-            Designed and implemented a professional landing page for Palmgate Gardeners. 
-            The project involved creating a clean, aesthetic layout that reflects the 
-            company's commitment to quality landscaping, featuring service galleries 
-            and streamlined contact options.
-          </p>
-          <div class="links">
-            <a href="https://palmgate-gardeners.vercel.app" target="_blank">Live Site →</a>
-          </div>
-        </div>
-
-        <!-- Project 7: Chess Wrapped -->
-        <div class="project-card fade-in-up">
-          <h3>Chess Wrapped <span class="badge badge-personal">Personal</span> <span class="badge badge-wip">In Progress</span></h3>
-          <p class="problem-solved">Surface meaningful personal chess statistics through a clean API</p>
-          <div class="tags">
-            <span class="tag tag-green">Python</span>
-            <span class="tag tag-green">FastAPI</span>
-            <span class="tag tag-green">PostgreSQL</span>
-            <span class="tag tag-green">Docker</span>
-            <span class="tag tag-green">REST APIs</span>
-          </div>
-          <p>
-            A personal stats API inspired by Spotify Wrapped. Pulls game data from the
-            Lichess and Chess.com public APIs, processes it, and exposes it through a
-            clean FastAPI layer. Highlights include opening tendencies, accuracy trends,
-            win/loss streaks, and peak performance periods. Fully containerised with Docker.
-          </p>
-          <div class="links">
-            <a href="https://github.com/lloydvheremu" target="_blank">GitHub →</a>
-          </div>
-        </div>
-
-        <!-- Project 8: FPL Fixture Difficulty Planner -->
-        <div class="project-card fade-in-up">
-          <h3>FPL Fixture Difficulty Planner <span class="badge badge-personal">Personal</span> <span class="badge badge-wip">In Progress</span></h3>
-          <p class="problem-solved">Help FPL managers make smarter transfer and captain decisions</p>
-          <div class="tags">
-            <span class="tag tag-green">Python</span>
-            <span class="tag tag-green">Django</span>
-            <span class="tag tag-green">REST API</span>
-            <span class="tag tag-green">PostgreSQL</span>
-          </div>
-          <p>
-            Web application consuming the Fantasy Premier League public API to pull live
-            fixture, team, and player data. Visualises fixture difficulty ratings across
-            upcoming gameweeks to help managers identify favourable runs for transfers
-            and captain picks.
-          </p>
-          <div class="links">
-            <a href="https://github.com/lloydvheremu" target="_blank">GitHub →</a>
           </div>
         </div>
 
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="social-links">
-        <a href="https://github.com/lloydvheremu" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/lloydvheremu" target="_blank">LinkedIn</a>
-        <a href="mailto:lloydblessin@outlook.com">Email</a>
+  <footer class="site-footer">
+    <div class="container" style="position: relative;">
+      <!-- Asset 5: Vintage MP3 Player resting on wood desk in footer -->
+      <img src="/assets/vintage-mp3-player.png" alt="" class="desk-object-photo desk-mp3-photo" aria-hidden="true" referrerPolicy="no-referrer" />
+      <div class="footer-content">
+        <div>
+          <strong style="color: var(--text-primary); font-family: var(--font-serif); font-size: 1.1rem;">Lloyd Vheremu</strong>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Full-Stack Engineer &bull; Ruwa, Zimbabwe</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="github.html">GitHub</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <p style="font-size: 0.8rem; color: var(--text-faint);">
+          &copy; <span id="current-year">2026</span> Lloyd Vheremu.
+        </p>
       </div>
-      <p>&copy; 2026 Lloyd Vheremu. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/effects/matrix-rain.js"></script>
-  <script src="js/effects/keypress-ripple.js"></script>
-  <script src="js/components/nav.js"></script>
-  <script src="js/effects/cursor-trail.js"></script>
-  <script src="js/components/theme-toggle.js"></script>
+  <script src="/js/components/nav.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

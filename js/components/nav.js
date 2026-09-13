@@ -1,4 +1,4 @@
-// Navigation Component - Active State Management
+// Navigation Component - Active State & Mobile Menu
 class Navigation {
   constructor() {
     this.init();
@@ -6,16 +6,15 @@ class Navigation {
 
   init() {
     this.setActiveLink();
+    this.setupMobileMenu();
   }
 
   setActiveLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('nav a');
+    const navLinks = document.querySelectorAll('.nav-menu a');
 
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
-
-      // Check if this is the current page
       if (href === currentPage ||
           (currentPage === '' && href === 'index.html') ||
           (currentPage === '/' && href === 'index.html')) {
@@ -25,9 +24,21 @@ class Navigation {
       }
     });
   }
+
+  setupMobileMenu() {
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('nav-menu-list');
+
+    if (toggleBtn && menu) {
+      toggleBtn.addEventListener('click', () => {
+        menu.classList.toggle('open');
+        const isExpanded = menu.classList.contains('open');
+        toggleBtn.setAttribute('aria-expanded', isExpanded);
+      });
+    }
+  }
 }
 
-// Auto-initialize
 document.addEventListener('DOMContentLoaded', () => {
   new Navigation();
 });

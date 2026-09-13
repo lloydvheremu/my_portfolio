@@ -1,317 +1,199 @@
-/* Effects CSS - Visual Effects & Animations */
+/* Lloyd Vheremu Portfolio - Marginalia & Organic Accents */
 
-/* Custom Cursor - Disabled */
-/* Using default browser cursor for better accessibility */
-
-/* Cursor Trail Effect */
-.cursor-trail-dot {
-  position: fixed;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent-green);
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: screen;
-  box-shadow: 0 0 8px var(--accent-green);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Light mode - adjust trail color */
-[data-theme="light"] .cursor-trail-dot {
-  background: var(--accent-cyan);
-  box-shadow: 0 0 6px var(--accent-cyan);
-  opacity: 0.6;
-}
-
-/* Matrix Rain Canvas */
-#matrix-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  opacity: 0.15;
-}
-
-/* Matrix Background - for other pages (more transparent) */
-.matrix-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.matrix-bg canvas {
-  opacity: 0.05;
-}
-
-/* Light mode - reduce matrix visibility even more */
-[data-theme="light"] #matrix-canvas,
-[data-theme="light"] .matrix-bg canvas {
-  opacity: 0.03;
-}
-
-/* Glitch Text Effect */
-.glitch {
+/* Hand-drawn SVG Wavy Underline */
+.hand-drawn-underline {
   position: relative;
+  white-space: nowrap;
   display: inline-block;
 }
 
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
+.hand-drawn-underline svg {
   position: absolute;
-  top: 0;
   left: 0;
+  bottom: -6px;
   width: 100%;
-  height: 100%;
-  opacity: 0.8;
-}
-
-.glitch::before {
-  animation: glitch-1 2s infinite;
-  color: var(--accent-cyan);
-  z-index: -1;
-}
-
-.glitch::after {
-  animation: glitch-2 3s infinite;
-  color: var(--accent-green);
-  z-index: -2;
-}
-
-@keyframes glitch-1 {
-  0%, 100% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(-2px, -2px);
-  }
-  60% {
-    transform: translate(2px, 2px);
-  }
-  80% {
-    transform: translate(2px, -2px);
-  }
-}
-
-@keyframes glitch-2 {
-  0%, 100% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(2px, -2px);
-  }
-  40% {
-    transform: translate(2px, 2px);
-  }
-  60% {
-    transform: translate(-2px, -2px);
-  }
-  80% {
-    transform: translate(-2px, 2px);
-  }
-}
-
-/* Scanline Overlay */
-.scanline-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.scanline-overlay::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: rgba(0, 255, 65, 0.1);
-  animation: scanline 8s linear infinite;
-}
-
-.scanline-overlay::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0.15) 1px,
-    transparent 1px,
-    transparent 2px
-  );
+  height: 9px;
+  overflow: visible;
   pointer-events: none;
 }
 
-/* Keypress Ripple */
-.keypress-ripple {
-  position: fixed;
-  border-radius: 50%;
-  border: 2px solid var(--accent-green);
-  pointer-events: none;
-  z-index: 9998;
-  animation: ripple-expand 0.8s ease-out forwards;
+.hand-drawn-underline path {
+  stroke: var(--accent);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 
-@keyframes ripple-expand {
+/* Hand-drawn Circle Accent around key numbers */
+.hand-drawn-circle {
+  position: relative;
+  display: inline-block;
+  padding: 0 0.25rem;
+}
+
+.hand-drawn-circle svg {
+  position: absolute;
+  top: -12%;
+  left: -12%;
+  width: 124%;
+  height: 124%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.hand-drawn-circle path {
+  stroke: var(--marginalia-gold);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  opacity: 0.85;
+}
+
+/* Marginalia Note */
+.marginalia-note {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--marginalia-ink);
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  position: relative;
+}
+
+.marginalia-note svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  stroke: var(--marginalia-gold);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Photographic Layered Desk Objects (True 90-degree Flat-Lay Aerial Perspective) */
+.desk-object-photo {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  object-fit: contain;
+  z-index: 15;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Asset 2 — Wooden Chess Knight (Top-down flat-lay lying on desk) */
+.desk-chess-photo {
+  top: -20px;
+  right: -20px;
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(0 4px 6px rgba(22, 11, 5, 0.35)) drop-shadow(0 1px 2px rgba(22, 11, 5, 0.22));
+  transform: rotate(-6deg);
+}
+
+/* Asset 3 — Simple Pen (Top-down flat-lay lying on side) */
+.desk-pen-photo {
+  top: -26px;
+  right: 22px;
+  width: 146px;
+  height: auto;
+  filter: drop-shadow(0 3px 5px rgba(22, 11, 5, 0.32)) drop-shadow(0 1px 2px rgba(22, 11, 5, 0.2));
+  transform: rotate(8deg);
+}
+
+/* Asset 4 — Closed Hardcover Book (Top-down flat-lay lying on desk) */
+.desk-book-photo {
+  top: -28px;
+  left: -22px;
+  width: 152px;
+  height: auto;
+  filter: drop-shadow(0 5px 8px rgba(22, 11, 5, 0.34)) drop-shadow(0 2px 3px rgba(22, 11, 5, 0.2));
+  transform: rotate(-3deg);
+}
+
+/* Asset 5 — Vintage iPod-Style MP3 Player (Top-down flat-lay lying on desk, screen up) */
+.desk-mp3-photo {
+  top: -42px;
+  right: 32px;
+  width: 96px;
+  height: auto;
+  filter: drop-shadow(0 4px 7px rgba(22, 11, 5, 0.36)) drop-shadow(0 1px 3px rgba(22, 11, 5, 0.22));
+  transform: rotate(5deg);
+}
+
+/* Wide-viewport enhancement: hide on mobile/tablet to avoid crowding */
+@media (max-width: 1024px) {
+  .desk-chess-photo,
+  .desk-pen-photo,
+  .desk-book-photo,
+  .desk-mp3-photo {
+    display: none !important;
+  }
+}
+
+/* Single Hand-Drawn Fountain / Drafting Pen Graphic */
+.desk-pen-wrapper {
+  position: absolute;
+  top: -28px;
+  right: 24px;
+  width: 170px;
+  height: 42px;
+  pointer-events: none;
+  z-index: 25;
+  transform: rotate(-14deg);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: drop-shadow(0 6px 10px rgba(35, 18, 8, 0.28));
+}
+
+@media (max-width: 768px) {
+  .desk-pen-wrapper {
+    top: -24px;
+    right: 12px;
+    width: 130px;
+    height: 32px;
+    transform: rotate(-10deg);
+  }
+}
+
+.hand-drawn-pen-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Subtle purposeful reveals */
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
   from {
-    width: 0;
-    height: 0;
-    opacity: 0.8;
+    opacity: 0;
+    transform: translateY(12px);
   }
   to {
-    width: 100px;
-    height: 100px;
-    opacity: 0;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Hero Section Specific */
-.hero {
-  position: relative;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: var(--spacing-lg);
-}
-
-.hero h1 {
-  font-size: 4rem;
-  margin-bottom: var(--spacing-sm);
-  color: var(--accent-green);
-}
-
-.hero .subtitle {
-  font-size: 1.5rem;
-  color: var(--text-primary);
-  margin-bottom: var(--spacing-md);
-  font-family: var(--font-display);
-}
-
-.hero .tagline {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  margin-bottom: var(--spacing-xl);
-  font-style: italic;
-}
-
-.hero .cta-buttons {
-  display: flex;
-  gap: var(--spacing-md);
-  justify-content: center;
-  margin-bottom: var(--spacing-2xl);
-}
-
-.scroll-indicator {
-  position: absolute;
-  bottom: var(--spacing-xl);
-  left: 50%;
-  transform: translateX(-50%);
-  animation: bounce 2s infinite;
-}
-
-.scroll-indicator::before {
-  content: '▼';
-  color: var(--accent-green);
-  font-size: 1.5rem;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(10px);
-  }
-}
-
-/* About Preview Section */
-.about-preview {
-  background: var(--bg-surface);
-  padding: var(--spacing-xl) 0;
-}
-
-.about-preview p {
-  max-width: 800px;
-  margin: 0 auto var(--spacing-lg) auto;
-  text-align: center;
-  color: var(--text-muted);
-  line-height: 1.8;
-}
-
-/* Hover Glow on Interactive Elements */
-.glow-on-hover {
-  transition: all 0.3s ease;
-}
-
-.glow-on-hover:hover {
-  box-shadow: var(--glow-green);
-}
-
-/* Page Title */
-.page-title {
-  text-align: center;
-  margin: var(--spacing-2xl) 0;
-  padding-top: var(--spacing-xl);
-}
-
-.page-title h1 {
-  font-size: 3rem;
-  color: var(--accent-green);
-  margin-bottom: var(--spacing-sm);
-}
-
-.page-title p {
-  color: var(--text-muted);
-  font-size: 1.1rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero .subtitle {
-    font-size: 1.2rem;
-  }
-
-  .hero .tagline {
-    font-size: 1rem;
-  }
-
-  .hero .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .page-title h1 {
-    font-size: 2rem;
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .fade-in-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

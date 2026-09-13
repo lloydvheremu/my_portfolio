@@ -1,28 +1,28 @@
-// GitHub API Integration
+// GitHub API Integration - Warm Humanist Styling
 class GitHubAPI {
-  constructor(username) {
+  constructor(username = 'lloydvheremu') {
     this.username = username;
     this.baseURL = 'https://api.github.com';
   }
 
   async fetchRepos() {
     try {
-      const response = await fetch(`${this.baseURL}/users/${this.username}/repos?sort=updated&per_page=6`);
+      const response = await fetch(`${this.baseURL}/users/${this.username}/repos?sort=updated&per_page=8`);
       if (!response.ok) throw new Error('Failed to fetch repos');
       return await response.json();
     } catch (error) {
-      console.error('Error fetching repos:', error);
+      console.warn('Error fetching repos:', error);
       return [];
     }
   }
 
   async fetchEvents() {
     try {
-      const response = await fetch(`${this.baseURL}/users/${this.username}/events/public?per_page=10`);
+      const response = await fetch(`${this.baseURL}/users/${this.username}/events/public?per_page=8`);
       if (!response.ok) throw new Error('Failed to fetch events');
       return await response.json();
     } catch (error) {
-      console.error('Error fetching events:', error);
+      console.warn('Error fetching events:', error);
       return [];
     }
   }
@@ -46,93 +46,65 @@ class GitHubAPI {
     if (!container) return;
 
     if (repos.length === 0) {
-      container.innerHTML = '<p class="text-muted">No repositories found.</p>';
+      container.innerHTML = '<p class="text-muted">No public repositories found or GitHub rate limit reached.</p>';
       return;
     }
 
     container.innerHTML = repos.map(repo => `
-      <div class="card fade-in-up">
-        <h3>
-          <a href="${repo.html_url}" target="_blank" class="text-accent">${repo.name}</a>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-category">GitHub Repository</span>
+          ${repo.stargazers_count > 0 ? `<span class="tag">★ ${repo.stargazers_count}</span>` : ''}
+        </div>
+        <h3 class="card-title">
+          <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>
         </h3>
-        <p>${repo.description || 'No description available'}</p>
-        <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-          ${repo.language ? `<span class="tag tag-green">${repo.language}</span>` : ''}
-          <span class="text-muted" style="font-size: 0.85rem;">⭐ ${repo.stargazers_count}</span>
-          <span class="text-muted" style="font-size: 0.85rem;">🔀 ${repo.forks_count}</span>
-          <span class="text-muted" style="font-size: 0.85rem;">Updated ${this.formatDate(repo.updated_at)}</span>
+        <p class="card-desc">${repo.description || 'Public open-source repository.'}</p>
+        <div class="tags-list">
+          ${repo.language ? `<span class="tag tag-accent">${repo.language}</span>` : ''}
+          <span class="tag">Updated ${this.formatDate(repo.updated_at)}</span>
         </div>
       </div>
     `).join('');
   }
 
   renderEvents(events) {
-    const container = document.getElementById('activity-feed');
+    const container = document.getElementById('events-list');
     if (!container) return;
 
-    // Filter push events
-    const pushEvents = events.filter(event => event.type === 'PushEvent').slice(0, 5);
-
-    if (pushEvents.length === 0) {
-      container.innerHTML = '<p class="text-muted">No recent activity found.</p>';
+    if (events.length === 0) {
+      container.innerHTML = '<p class="text-muted">No recent public activity found.</p>';
       return;
     }
 
-    container.innerHTML = pushEvents.map(event => {
-      const commits = event.payload.commits || [];
-      const commitCount = commits.length;
+    container.innerHTML = events.map(event => {
+      const eventType = event.type.replace('Event', '');
       const repoName = event.repo.name;
-      const branch = event.payload.ref.split('/').pop();
-
       return `
-        <div class="activity-item fade-in-up">
-          <p class="text-accent">
-            Pushed ${commitCount} commit${commitCount > 1 ? 's' : ''} to
-            <a href="https://github.com/${repoName}" target="_blank">${repoName}</a>
-            (${branch})
+        <div class="card" style="padding: 1.25rem; margin-bottom: 1rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+            <strong style="font-family: var(--font-sans); font-size: 0.95rem; color: var(--text-primary);">${eventType}</strong>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">${this.formatDate(event.created_at)}</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">
+            Repository: <a href="https://github.com/${repoName}" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-family: var(--font-mono);">${repoName}</a>
           </p>
-          <p class="text-muted" style="font-size: 0.85rem;">${this.formatDate(event.created_at)}</p>
-          ${commits.length > 0 ? `
-            <ul style="margin-top: 0.5rem; list-style: none; padding-left: 0;">
-              ${commits.slice(0, 2).map(commit => `
-                <li class="text-muted" style="font-size: 0.85rem; margin-bottom: 0.25rem;">
-                  > ${commit.message}
-                </li>
-              `).join('')}
-            </ul>
-          ` : ''}
         </div>
       `;
     }).join('');
   }
 
   async init() {
-    // Show loading state
-    const reposContainer = document.getElementById('repos-grid');
-    const activityContainer = document.getElementById('activity-feed');
-
-    if (reposContainer) {
-      reposContainer.innerHTML = '<div class="loading"></div>';
-    }
-    if (activityContainer) {
-      activityContainer.innerHTML = '<div class="loading"></div>';
-    }
-
-    // Fetch and render data
-    const [repos, events] = await Promise.all([
-      this.fetchRepos(),
-      this.fetchEvents()
-    ]);
-
+    const repos = await this.fetchRepos();
     this.renderRepos(repos);
+
+    const events = await this.fetchEvents();
     this.renderEvents(events);
   }
 }
 
-// Auto-initialize on GitHub page
 document.addEventListener('DOMContentLoaded', () => {
-  const githubPage = document.getElementById('github-page');
-  if (githubPage) {
+  if (document.getElementById('repos-grid') || document.getElementById('events-list')) {
     const api = new GitHubAPI('lloydvheremu');
     api.init();
   }

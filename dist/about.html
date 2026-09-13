@@ -3,273 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Learn about Lloyd Vheremu - Computer Science graduate from NUST Zimbabwe with 2+ years of commercial software development experience in Python, JavaScript, Django, and Odoo.">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Lloyd Blessing Vheremu">
-  <meta name="keywords" content="Lloyd Vheremu, About, Software Developer, Python Developer, JavaScript Developer, NUST Zimbabwe, Full-Stack Engineer">
-  <title>About | Lloyd Vheremu</title>
-  <link rel="canonical" href="https://lloydvheremu.github.io/my_portfolio/about.html">
-
-  <!-- Favicons -->
-  <link rel="icon" href="/my_portfolio/favicon.ico" sizes="any">
-  <link rel="icon" href="/my_portfolio/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/my_portfolio/favicon.png" type="image/png" sizes="32x32">
-  <link rel="shortcut icon" href="/my_portfolio/favicon.ico">
-  <link rel="apple-touch-icon" href="/my_portfolio/apple-touch-icon.png" sizes="180x180">
-  <link rel="manifest" href="/my_portfolio/manifest.json">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://lloydvheremu.github.io/my_portfolio/about.html">
-  <meta property="og:title" content="About Lloyd Vheremu | Software Developer">
-  <meta property="og:description" content="Computer Science graduate from NUST Zimbabwe with 2+ years building production systems in Python and JavaScript.">
-  <meta property="og:image" content="https://lloydvheremu.github.io/my_portfolio/assets/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Lloyd Vheremu">
-
-  <!-- Twitter/X Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://lloydvheremu.github.io/my_portfolio/about.html">
-  <meta name="twitter:title" content="About Lloyd Vheremu | Software Developer">
-  <meta name="twitter:description" content="Computer Science graduate from NUST Zimbabwe with 2+ years building production systems in Python and JavaScript.">
-  <meta name="twitter:image" content="https://lloydvheremu.github.io/my_portfolio/assets/og-image.png">
-
-  <!-- Mobile / PWA -->
-  <meta name="theme-color" content="#00ff41" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#00b300" media="(prefers-color-scheme: light)">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <!-- Performance / DNS Prefetch -->
-  <link rel="dns-prefetch" href="//api.github.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- Stylesheets -->
-
-  <style>
-    .about-header {
-      text-align: center;
-      padding: var(--spacing-2xl) 0;
-      padding-top: 100px;
-    }
-
-    .avatar {
-      width: 150px;
-      height: 150px;
-      margin: 0 auto var(--spacing-lg);
-      background: var(--bg-surface);
-      border: 3px solid var(--accent-green);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      font-family: var(--font-display);
-      color: var(--accent-green);
-      box-shadow: var(--glow-green);
-    }
-
-    .bio {
-      max-width: 800px;
-      margin: 0 auto var(--spacing-2xl);
-      line-height: 1.8;
-    }
-
-    .bio p {
-      color: var(--text-muted);
-      margin-bottom: var(--spacing-md);
-    }
-
-    .skills-section {
-      padding: var(--spacing-xl) 0;
-    }
-
-    .skill-category {
-      margin-bottom: var(--spacing-xl);
-    }
-
-    .skill-category h3 {
-      color: var(--accent-green);
-      margin-bottom: var(--spacing-md);
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--spacing-sm);
-    }
-
-    .interests {
-      background: var(--bg-surface);
-      padding: var(--spacing-lg) 0;
-      text-align: center;
-      border-top: 1px solid var(--bg-border);
-      border-bottom: 1px solid var(--bg-border);
-    }
-
-    .interests h3 {
-      color: var(--accent-cyan);
-      margin-bottom: var(--spacing-md);
-    }
-
-    .interest-tags {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: var(--spacing-sm);
-    }
-  </style>
-  <link rel="stylesheet" crossorigin href="/assets/effects-i43uAgEz.css">
+  <title>About Lloyd Vheremu | Full-Stack Engineer &amp; Systems Thinker</title>
+  <meta name="description" content="Learn about Lloyd Vheremu — Computer Science graduate from NUST Zimbabwe, Odoo ERP specialist with 50+ enterprise rollouts, and builder of deliberate software.">
+  <meta property="og:title" content="About Lloyd Vheremu | Full-Stack Engineer">
+  <meta property="og:description" content="Computer Science graduate from NUST Zimbabwe with 2+ years building mission-critical enterprise systems in Python and JavaScript.">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/effects.css">
 </head>
 <body>
-  <!-- Matrix Background -->
-  <div class="matrix-bg"></div>
 
   <!-- Navigation -->
-  <nav>
-    <div class="container">
-      <div class="logo">LBV</div>
-      <div class="nav-right">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="experience.html">Experience</a></li>
-          <li><a href="github.html">GitHub</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <button id="theme-toggle" class="theme-toggle">☀ Light</button>
-      </div>
+  <nav class="site-nav" id="main-navigation" aria-label="Main Navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" id="brand-link">
+        <span class="brand-name">Lloyd Vheremu</span>
+        <span class="brand-tag">Engineer &bull; Ruwa, Zimbabwe</span>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu-list">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="active">About</a></li>
+        <li class="nav-item"><a href="experience.html">Experience</a></li>
+        <li class="nav-item"><a href="projects.html">Projects</a></li>
+        <li class="nav-item"><a href="github.html">GitHub</a></li>
+        <li class="nav-item"><a href="contact.html">Contact</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- About Header -->
-  <section class="about-header fade-in">
-    <div class="container">
-      <div class="avatar">LBV</div>
-      <h1 class="text-accent">About Me</h1>
-    </div>
-  </section>
-
-  <!-- Bio -->
-  <section class="section">
-    <div class="container bio">
-      <p>
-        I'm Lloyd B. Vheremu, a Computer Science graduate from the National University of Science and Technology (NUST) in Zimbabwe.
-        With over 2 years of commercial software development experience, I've had the opportunity to work on diverse projects
-        ranging from ERP systems to web applications, building solutions that solve real-world business problems.
-      </p>
-      <p>
-        My expertise spans full-stack development with a strong foundation in Python and JavaScript. I specialize in building
-        robust backend systems with Django and PostgreSQL, creating modern frontends with Next.js and React, and developing
-        custom ERP solutions using the Odoo framework. I'm passionate about writing clean, maintainable code and delivering
-        high-quality software that makes a difference.
-      </p>
-      <p>
-        I'm currently seeking remote software developer opportunities where I can contribute to meaningful projects, collaborate
-        with talented teams, and continue growing as an engineer. I'm particularly interested in roles that challenge me to solve
-        complex problems and build scalable, user-focused applications.
-      </p>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section class="section skills-section">
-    <div class="container">
-      <h2 class="text-center text-accent">Technical Skills</h2>
-
-      <div class="skill-category">
-        <h3>Backend</h3>
-        <div class="skill-tags">
-          <span class="tag tag-green">Python</span>
-          <span class="tag tag-green">Django</span>
-          <span class="tag tag-green">PostgreSQL</span>
-          <span class="tag tag-green">REST APIs</span>
-          <span class="tag tag-green">Docker</span>
+  <main id="main-content">
+    <!-- Header Section -->
+    <section class="section" style="padding-bottom: var(--space-lg);">
+      <div class="container">
+        <div class="section-header" style="max-width: 800px;">
+          <span class="section-label">Background &amp; Story</span>
+          <h1>Engineer by trade, systems thinker by nature.</h1>
+          <p class="section-description">
+            A look into how I build software, where I studied, and the ideas and interests that shape my perspective.
+          </p>
         </div>
       </div>
+    </section>
 
-      <div class="skill-category">
-        <h3>Frontend</h3>
-        <div class="skill-tags">
-          <span class="tag tag-green">JavaScript</span>
-          <span class="tag tag-green">Next.js</span>
-          <span class="tag tag-green">React</span>
-          <span class="tag tag-green">Tailwind CSS</span>
-          <span class="tag tag-green">Bootstrap</span>
+    <!-- Main Narrative & Portrait Split -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="hero-grid" style="align-items: start;">
+          
+          <!-- Narrative -->
+          <div class="prose-editorial">
+            <p>
+              I am a software engineer based in <strong>Ruwa, Zimbabwe</strong>. My interest in programming began with curiosity about how complex structures function under pressure, which led me to complete a <strong>BSc (Honours) in Computer Science at the National University of Science and Technology (NUST)</strong>, graduating in 2024 with a 2.1 classification.
+            </p>
+
+            <h3 style="margin: 2rem 0 1rem;">The Enterprise Crucible</h3>
+            <p>
+              For the past two-plus years, I have worked at <strong>M&amp;J SERPA</strong>, an official Odoo partner. Working on ERP systems quickly teaches you that software is never abstract &mdash; it directly underpins people's livelihoods, payroll runs, inventory deliveries, and regulatory status.
+            </p>
+            <p>
+              Over <strong>50+ production deployments</strong>, I specialized in mission-critical fiscal compliance integrations: connecting point-of-sale and invoicing workflows to the <strong>ZIMRA Fiscal Device Management System (FDMS)</strong> in Zimbabwe and <strong>ZRA SmartInvoice</strong> in Zambia. In these environments, an unhandled exception or malformed payload isn't a small bug &mdash; it halts physical checkout counters and creates tax compliance exposure. That discipline shaped how I approach every line of Python, every PostgreSQL query, and every REST endpoint.
+            </p>
+
+            <div class="callout-quote">
+              &ldquo;Simplicity is prerequisite for reliability.&rdquo; &mdash; Edsger W. Dijkstra
+            </div>
+
+            <h3 style="margin: 2rem 0 1rem;">Beyond the Screen</h3>
+            <p>
+              I am fundamentally an introvert who thrives in quiet, focused flow states. When I step away from code, my mind seeks patterns elsewhere:
+            </p>
+            <ul style="padding-left: 1.25rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li>
+                <strong>Competitive Chess:</strong> Playing regularly as <em>knightking_zw</em> on Chess.com. I particularly favor <strong>Chess960 (Fischer Random)</strong> because it strips away opening book memorization, demanding pure evaluation of dynamic piece coordination from move one.
+              </li>
+              <li>
+                <strong>Sudoku &amp; Logic Puzzles:</strong> Daily constraint-satisfaction workouts that mirror algorithmic thinking.
+              </li>
+              <li>
+                <strong>Reflective Journaling:</strong> An indispensable morning and evening ritual for reviewing decisions, setting engineering intentions, and keeping clarity amidst complex projects.
+              </li>
+              <li>
+                <strong>Philosophy &amp; Disciplined Craft:</strong> Reading Stoic thinkers like Marcus Aurelius, Alan Watts on presence, and historical discipline treatises like <em>Bushido (Hagakure)</em>, alongside gripping sci-fi like Andy Weir's <em>Project Hail Mary</em>.
+              </li>
+              <li>
+                <strong>Music for Concentration:</strong> Intricate lyricism (J. Cole, Kendrick Lamar, Drake), cinematic scores (Hans Zimmer), alternative rock (Linkin Park), and endless instrumental lofi chords during deep debugging marathons.
+              </li>
+            </ul>
+
+            <h3 style="margin: 2rem 0 1rem;">Education</h3>
+            <div class="card" style="padding: 1.5rem; background: var(--bg-surface); margin-top: 0.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                  <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--text-primary); font-weight: 600;">
+                    BSc (Hons) in Computer Science
+                  </h4>
+                  <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                    National University of Science and Technology (NUST), Zimbabwe
+                  </p>
+                </div>
+                <span class="tag tag-accent">Graduated 2024 &bull; 2.1 Honours</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.75rem;">
+                Core coursework: Distributed Systems, Advanced Data Structures &amp; Algorithms, Database Management Systems, Software Engineering Methodologies, Network Security.
+              </p>
+            </div>
+          </div>
+
+          <!-- Portrait & Side Cards -->
+          <div style="display: flex; flex-direction: column; gap: 2rem;">
+            
+            <div class="portrait-container">
+              <div class="portrait-frame">
+                <div class="portrait-placeholder-box">
+                  <div class="portrait-silhouette">
+                    <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </div>
+                  <div class="portrait-placeholder-text">
+                    <strong>[PHOTO PLACEHOLDER]</strong>
+                    Lloyd Vheremu Portrait
+                    <span style="display:block; font-size: 0.72rem; color: var(--text-faint); margin-top: 4px;">Photo will be displayed here</span>
+                  </div>
+                </div>
+                <div class="portrait-caption">
+                  <span class="location">Ruwa, Zimbabwe</span>
+                  <span class="tag">GMT+2 Timezone</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Facts Card -->
+            <div class="card" style="padding: 1.5rem;">
+              <span class="card-category">Quick Profile</span>
+              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin: 0.25rem 0 1rem;">At a Glance</h4>
+              
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem;">
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-muted);">Current Role:</span>
+                  <strong style="color: var(--text-primary);">Software Engineer</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-muted);">Company:</span>
+                  <span>M&amp;J Consultants</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-muted);">Experience:</span>
+                  <span>2+ Years Commercial</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-muted);">Primary Languages:</span>
+                  <span>Python, JavaScript, SQL</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-muted);">Chess Handle:</span>
+                  <a href="https://www.chess.com/member/knightking_zw" target="_blank" style="color: var(--accent);">knightking_zw &nearr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hand-annotated marginalia note -->
+            <div class="marginalia-note" style="padding: 1rem; background: var(--bg-subtle); border-radius: var(--radius-md); border: 1px dashed var(--border-medium);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+              <span>&ldquo;A chess game or an ERP codebase &mdash; both reward patience and penalize rushed assumptions.&rdquo;</span>
+            </div>
+
+          </div>
+
         </div>
       </div>
-
-      <div class="skill-category">
-        <h3>ERP / Specialist</h3>
-        <div class="skill-tags">
-          <span class="tag tag-cyan">Odoo (v15–v19)</span>
-          <span class="tag tag-cyan">QWeb</span>
-          <span class="tag tag-cyan">OWL Framework</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Tools & DevOps</h3>
-        <div class="skill-tags">
-          <span class="tag tag-green">Git</span>
-          <span class="tag tag-green">GitHub</span>
-          <span class="tag tag-green">Linux</span>
-          <span class="tag tag-green">SSH</span>
-          <span class="tag tag-green">Nginx</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Other</h3>
-        <div class="skill-tags">
-          <span class="tag tag-green">Flutter</span>
-          <span class="tag tag-green">Dart</span>
-          <span class="tag tag-green">Java</span>
-          <span class="tag tag-green">C/C++</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interests -->
-  <section class="interests">
-    <div class="container">
-      <h3>Interests & Hobbies</h3>
-      <div class="interest-tags">
-        <span class="tag tag-cyan">Chess</span>
-        <span class="tag tag-cyan">Gaming</span>
-        <span class="tag tag-cyan">Reading</span>
-        <span class="tag tag-cyan">Soccer</span>
-        <span class="tag tag-cyan">Sudoku</span>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="social-links">
-        <a href="https://github.com/lloydvheremu" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/lloydvheremu" target="_blank">LinkedIn</a>
-        <a href="mailto:lloydblessin@outlook.com">Email</a>
+  <footer class="site-footer">
+    <div class="container" style="position: relative;">
+      <!-- Asset 5: Vintage MP3 Player resting on wood desk in footer -->
+      <img src="/assets/vintage-mp3-player.png" alt="" class="desk-object-photo desk-mp3-photo" aria-hidden="true" referrerPolicy="no-referrer" />
+      <div class="footer-content">
+        <div>
+          <strong style="color: var(--text-primary); font-family: var(--font-serif); font-size: 1.1rem;">Lloyd Vheremu</strong>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Full-Stack Engineer &bull; Ruwa, Zimbabwe</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="github.html">GitHub</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <p style="font-size: 0.8rem; color: var(--text-faint);">
+          &copy; <span id="current-year">2026</span> Lloyd Vheremu.
+        </p>
       </div>
-      <p>&copy; 2026 Lloyd Vheremu. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/effects/matrix-rain.js"></script>
-  <script src="js/effects/keypress-ripple.js"></script>
-  <script src="js/components/nav.js"></script>
-  <script src="js/effects/cursor-trail.js"></script>
-  <script src="js/components/theme-toggle.js"></script>
+  <script src="/js/components/nav.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
