@@ -1,0 +1,218 @@
+/* Lloyd Vheremu Portfolio - Warm Humanist Design System */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Warm Neutral Palette */
+  --bg-page: #FAF7F2;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F4EFEA;
+  --bg-muted: #EAE3D9;
+  
+  --border-subtle: #E8E0D5;
+  --border-medium: #D8CCC0;
+  --border-strong: #BDB0A0;
+  
+  /* Ink & Typography */
+  --text-primary: #1C1917;    /* Warm Deep Charcoal Ink */
+  --text-secondary: #44403C;  /* Readable Warm Body Ink */
+  --text-muted: #78716C;      /* Meta, timestamps, secondary */
+  --text-faint: #A8A29E;      /* Footers, subtle hints */
+  
+  /* Confident Earth Accent: Warm Terracotta / Iron Clay */
+  --accent: #B85324;
+  --accent-hover: #983F17;
+  --accent-soft: rgba(184, 83, 36, 0.08);
+  --accent-border: rgba(184, 83, 36, 0.24);
+  --accent-focus: rgba(184, 83, 36, 0.16);
+
+  /* Marginalia & Hand-notations */
+  --marginalia-ink: #7C2D12;
+  --marginalia-bg: #FEF3C7;
+  --marginalia-gold: #B45309;
+
+  /* Typography Scales */
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Elevation */
+  --shadow-subtle: 0 1px 3px rgba(28, 25, 23, 0.04), 0 1px 2px rgba(28, 25, 23, 0.02);
+  --shadow-card: 0 4px 12px rgba(28, 25, 23, 0.04), 0 1px 3px rgba(28, 25, 23, 0.03);
+  --shadow-lift: 0 10px 24px -4px rgba(28, 25, 23, 0.06), 0 2px 6px -1px rgba(28, 25, 23, 0.03);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3.5rem;
+  --space-2xl: 5rem;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #4a2e18;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  /* Top-down photographic warm oak wood desk background */
+  background-image: 
+    radial-gradient(circle at 50% 25%, rgba(255, 245, 235, 0.04) 0%, rgba(15, 8, 3, 0.42) 100%),
+    url('/assets/wood-desk-bg.jpg');
+  background-size: cover, cover;
+  background-position: center center, center top;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+}
+
+/* Base typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Section Spacing */
+.section {
+  padding: var(--space-2xl) 0;
+}
+
+.section-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: var(--space-xl);
+  box-shadow: 0 10px 25px -4px rgba(25, 12, 5, 0.2), 0 3px 8px -1px rgba(25, 12, 5, 0.12);
+  display: block;
+  max-width: 820px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .section-header {
+    padding: 1.75rem 2.25rem;
+  }
+}
+
+/* Paper document wrapper for editorial reading content */
+.paper-document {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  box-shadow: 0 12px 30px -4px rgba(25, 12, 5, 0.22), 0 4px 10px rgba(25, 12, 5, 0.12);
+  position: relative;
+}
+
+/* Paper label heading on desk */
+.desk-section-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(25, 12, 5, 0.18);
+  margin-bottom: 1.25rem;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-label::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 1.5px;
+  background: var(--accent);
+}
+
+.section-description {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 64ch;
+  margin-top: 0.5rem;
+}
+
+/* Selection */
+::selection {
+  background: rgba(184, 83, 36, 0.2);
+  color: var(--text-primary);
+}

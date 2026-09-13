@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <!-- Anisotropic wood grain turbulence: stretched along Y-axis for realistic directional wood pores & fibers -->
+    <filter id="woodFibers" x="0" y="0" width="100%" height="100%" filterUnits="userSpaceOnUse">
+      <feTurbulence type="fractalNoise" baseFrequency="0.005 0.16" numOctaves="4" result="fibers" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="
+        0.35 0    0    0 0.32
+        0    0.22 0    0 0.19
+        0    0    0.12 0 0.10
+        0    0    0    0.70 0" in="fibers" result="coloredFibers" />
+    </filter>
+  </defs>
+  <!-- Warm walnut/oak plank background with longitudinal fiber overlay -->
+  <rect width="100%" height="100%" fill="#523219" />
+  <rect width="100%" height="100%" filter="url(#woodFibers)" opacity="0.85" />
+</svg>
