@@ -6,8 +6,6 @@ Personal portfolio website showcasing my work as a Software Developer.
 
 This is a static website built with pure HTML, CSS, and vanilla JavaScript. No frameworks or build tools required.
 
-**Live Site:** http://localhost:8000 (development)
-
 ## Features
 
 - **Matrix/Gamer Theme:** Dark background with neon green (#00ff41) and cyan (#00b4d8) accents
