@@ -1,99 +1,46 @@
-# Lloyd Vheremu - Portfolio Website
+# Lloyd Vheremu — Portfolio Website
 
-Personal portfolio website showcasing my work as a Software Developer.
+Personal portfolio website of **Lloyd Vheremu**, a full-stack software engineer and enterprise systems specialist based in Ruwa, Zimbabwe.
 
-## Overview
+Built with semantic HTML5, modern CSS3, and vanilla JavaScript, styled with a warm editorial aesthetic and clear typography.
 
-This is a static website built with pure HTML, CSS, and vanilla JavaScript. No frameworks or build tools required.
+## Pages
 
-## Features
-
-- **Matrix/Gamer Theme:** Dark background with neon green (#00ff41) and cyan (#00b4d8) accents
-- **Visual Effects:**
-  - Matrix rain canvas animation
-  - Custom cursor with glow effect
-  - Glitch text on hero name
-  - Keypress ripple animations
-  - Scanline overlay
-  - Smooth scroll animations
-
-- **Pages:**
-  - **Home (index.html):** Hero section with matrix rain, about preview, skills marquee
-  - **About:** Bio, technical skills grouped by category, interests
-  - **Projects:** Project cards with stack tags and links
-  - **Experience:** Timeline of work history and education
-  - **GitHub:** Live data from GitHub API - repos, contribution graph, recent activity
-  - **Contact:** Terminal-style contact form and social links
+- **Home (`index.html`)** — Overview of production Odoo ERP work, ZIMRA FDMS / ZRA SmartInvoice integrations, technical toolkit, and personal interests.
+- **About (`about.html`)** — Background, education (BSc Honours in Computer Science from NUST), and approach to software.
+- **Experience (`experience.html`)** — Work history covering 50+ enterprise Odoo deployments, tax compliance gateways, and database tuning.
+- **Projects (`projects.html`)** — Personal projects including Chess Wrapped (Lichess API) and an AI Fantasy Premier League assistant.
+- **GitHub (`github.html`)** — Live public repositories and contribution graph fetched via GitHub API.
+- **Contact (`contact.html`)** — Direct contact form, location, and communication channels.
 
 ## Tech Stack
 
-- HTML5
-- CSS3 (with CSS variables for theming)
-- Vanilla JavaScript (ES6+)
-- GitHub REST API (for live data)
-- Google Fonts (JetBrains Mono, Fira Code)
+- **Frontend:** Semantic HTML5, CSS3 (custom properties, flexbox/grid), Vanilla JavaScript (ES6+)
+- **APIs:** GitHub REST API, Lichess API
+- **Build Tool:** Vite (`npm run dev`, `npm run build`)
+- **Typography:** Plus Jakarta Sans, Playfair Display, JetBrains Mono
 
-## Project Structure
-
-```
-/
-├── index.html              # Home page
-├── about.html              # About page
-├── projects.html           # Projects page
-├── experience.html         # Experience timeline
-├── github.html             # GitHub activity
-├── contact.html            # Contact form
-├── css/
-│   ├── global.css          # CSS variables, base styles, animations
-│   ├── components.css      # Reusable UI components
-│   └── effects.css         # Visual effects styling
-├── js/
-│   ├── effects/
-│   │   ├── matrix-rain.js
-│   │   ├── custom-cursor.js
-│   │   ├── glitch-text.js
-│   │   └── keypress-ripple.js
-│   ├── components/
-│   │   └── nav.js
-│   └── github-api.js       # GitHub API integration
-└── assets/                 # Images, fonts (if needed)
-```
-
-## Development
-
-### Running Locally
-
-Start a simple HTTP server:
+## Getting Started
 
 ```bash
-# Python 3
-python3 -m http.server 8000
+# Install dependencies
+npm install
 
-# Or using Node.js
-npx http-server -p 8000
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
 ```
-
-Then visit `http://localhost:8000` in your browser.
-
-### No Build Step Required
-
-This is a static site - just open any HTML file in a browser or serve the directory with any HTTP server.
-
-## Design Principles
-
-Following CLAUDE.md specification:
-- **Colors:** Dark theme (#0a0a0a bg, #00ff41 matrix green, #00b4d8 cyan)
-- **Typography:** Monospace fonts only (JetBrains Mono, Fira Code)
-- **Effects:** Terminal/HUD aesthetic with glow effects and animations
-- **No generic templates:** Custom design with unique character
 
 ## Contact
 
-- **Email:** lloydblessin@outlook.com
-- **GitHub:** https://github.com/lloydvheremu
-- **LinkedIn:** https://www.linkedin.com/in/lloydvheremu
-- **Phone:** +263 77 195 1098 / +263 78 282 4022
+- **Email:** [lloydblessin@outlook.com](mailto:lloydblessin@outlook.com)
+- **GitHub:** [github.com/lloydvheremu](https://github.com/lloydvheremu)
+- **LinkedIn:** [linkedin.com/in/lloydvheremu](https://www.linkedin.com/in/lloydvheremu)
+- **Phone / WhatsApp:** +263 77 195 1098 / +263 78 282 4022
 
 ## License
 
-© 2026 Lloyd Vheremu. All rights reserved.
+&copy; 2026 Lloyd Vheremu. All rights reserved.
+
