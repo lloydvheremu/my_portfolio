@@ -1,6 +1,6 @@
 # Lloyd Vheremu — Portfolio Website
 
-Personal portfolio website of **Lloyd Vheremu**, a full-stack software engineer and enterprise systems specialist based in Ruwa, Zimbabwe.
+Personal portfolio website of **Lloyd Vheremu**, a full-stack software engineer and enterprise systems specialist based in Zimbabwe.
 
 Built with semantic HTML5, modern CSS3, and vanilla JavaScript, styled with a warm editorial aesthetic and clear typography.
 
@@ -38,7 +38,6 @@ npm run build
 - **Email:** [lloydblessin@outlook.com](mailto:lloydblessin@outlook.com)
 - **GitHub:** [github.com/lloydvheremu](https://github.com/lloydvheremu)
 - **LinkedIn:** [linkedin.com/in/lloydvheremu](https://www.linkedin.com/in/lloydvheremu)
-- **Phone / WhatsApp:** [phone removed] / [phone removed]
 
 ## License
 

@@ -23,8 +23,7 @@ removed for this reason. The CV says **5+ concurrent client environments**.
 | Name     | Lloyd B. Vheremu                         |
 | Title    | Software Developer (Odoo / Python)       |
 | Email    | lloydblessin@outlook.com                 |
-| Phone    | [phone removed] / [phone removed]      |
-| Location | Ruwa, Zimbabwe (open to remote globally) |
+| Location | Zimbabwe (open to remote globally) — town and phone deliberately not published |
 | GitHub   | https://github.com/lloydvheremu          |
 | LinkedIn | https://www.linkedin.com/in/lloydvheremu |
 | Chess    | knightking_zw (Chess.com)                |
