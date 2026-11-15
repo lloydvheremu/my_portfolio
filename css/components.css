@@ -296,6 +296,16 @@
   overflow: hidden;
 }
 
+.portrait-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 4.8;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: var(--radius-md);
+}
+
 .portrait-silhouette {
   width: 72px;
   height: 72px;
