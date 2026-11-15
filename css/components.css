@@ -191,7 +191,7 @@
 
 @media (min-width: 900px) {
   .hero-grid {
-    grid-template-columns: 1.25fr 1fr;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
     gap: 3.5rem;
     padding: 3.5rem 3rem;
   }
@@ -261,8 +261,13 @@
 /* Portrait Card Placeholder */
 .portrait-container {
   position: relative;
+  width: 100%;
   max-width: 380px;
   margin: 0 auto;
+}
+
+.hero-visual {
+  align-self: start;
 }
 
 .portrait-frame {
