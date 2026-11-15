@@ -41,7 +41,7 @@ The site is **plain static HTML/CSS/JS** — not Next.js.
 | Scripts    | Vanilla JS in `js/` (nav, effects, GitHub/Chess API helpers)             |
 | Build tool | Vite + React/Tailwind deps exist in `package.json` (AI Studio leftover) but are **not needed to deploy** |
 | Analytics  | Vercel Web Analytics (`@vercel/analytics`)                               |
-| Hosting    | GitHub Pages — `.github/workflows/static.yml` uploads the repo root (`path: '.'`) on push to `main` |
+| Hosting    | Vercel (Git integration, static files from the repo root). No GitHub Actions workflows — `.github/` was removed |
 
 Pages use absolute asset paths (`/css/global.css`, `/assets/...`), so preview from the repo root with a static server,
 not via `file://`.
@@ -130,7 +130,7 @@ python3 -m http.server 4173      # then open http://localhost:4173/
 npm install && npm run dev
 npm run build
 
-# Deploy: push to main; GitHub Pages workflow publishes the repo root
+# Deploy: push to main; Vercel's Git integration publishes the site
 git push origin main
 ```
 
